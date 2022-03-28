@@ -24,9 +24,24 @@ $(function () {
     .css('padding', '25px')
 
   //pseudo element
-  $('p:contains(html)').css('box-shadow', '1px 1px 2px 5px rgba(2,2,2,.8');
+  $('p:contains(html)').css('box-shadow', '1px 1px 2px 5px rgba(2,2,2,.8')
 
+  $("ul li:not(':contains(css 3)')")
+    .css('color', 'blue')
+    .css('background', 'black')
 
-  $("ul li:not(':contains(css 3)')").css("color","blue").css("background","black");
+  //CSS inline Object
+  //   $('#deneme44').css().css().css();
+  //  Tırnaksız ==> backgroundColor
+  //  Tırnaklı ==> background-color
+  $('#deneme44').css({ color: 'yellow', backgroundColor: 'green' });
+
+   //CSS Object
+  let objectCss={
+      "font-size":"65px",
+      "color":"red",
+      "background":"orange"
+  }
+  $('#deneme33').css(objectCss);
 
 })
