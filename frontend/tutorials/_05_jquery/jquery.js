@@ -8,10 +8,16 @@ Ajax yazmak  kolaydır.
 DOM manipülasyonları yazma maliyeti daha düşüktür.
 */
 
+//Document.ready
 $(function (){
     // JS DOM
     //document.getElementById("jquery_id").innerHTML="<b>jquery buradaydı</b>";
 
     // JQUERY
-   $("#jquery_id").html("<b>jquery buradaydı</b>")
+    //HTML
+   $("#jquery_id").html("<b> <i>jquery buradaydı </i> </b>");
+
+
+   //CSS
+   $("#jquery_id").css("background-color","red").css("color","blue").css("padding","25px");
 })
