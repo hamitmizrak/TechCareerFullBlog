@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!-- jquery validate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+
+    <style>
+        label.error {
+            color: red;
+            font-size: 1rem;
+            display: block;
+            margin-top: 5px;
+        }
+
+        label.error.fail-alert {
+            border: 2px solid red;
+            border-radius: 4px;
+            line-height: 1;
+            padding: 2px 0 6px 6px;
+            background: #ffe6eb;
+        }
+
+        input.valid.success-alert {
+            border: 2px solid #4CAF50;
+            color: green;
+        }
+
+        input.error,
+        textarea.error {
+            border: 1px dashed red;
+            font-weight: 300;
+            color: red;
+        }
+    </style>
+</head>
+
+<body class="container">
+
+    <a class="btn btn-danger btn-sm" data-toggle="modal" data-target="#registerId" href="#">Register</a>
+
+    <div class="modal fade" name="registration" id="registerId" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h3 class="text-center">Üye Kayıt</h3>
+
+                    <form id="basic_form" action="#" method="get">
+                        <div class="form-group">
+                            <input id="name" name="name" class="form-control" placeholder="en az 3 karakter giriniz">
+                        </div>
+
+                        <div class="form-group">
+                            <input id="password" name="password" class="form-control" placeholder="parolanız">
+                        </div>
+
+                        <div class="form-group">
+                            <input id="password_confirm" name="password_confirm" class="form-control"
+                                placeholder="parolanız tekrar ">
+                        </div>
+
+                        <div class="form-group">
+                            <input id="email" name="email" class="form-control" placeholder="Emailinizi giriniz">
+                        </div>
+
+                        <div class="btn-group mt-3">
+                            <input type="reset" class="btn btn-danger mr-3" value="Temizle">
+                            <input type="submit" class="btn btn-primary" value="Gönder">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type=button class="btn btn-danger" data-dismiss="modal">Kapat</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //login register
+        //registerId  registerModal
+        $(document).ready(function () {
+            $("#basic_form").validate({
+                errorClass: "error fail-alert",
+                validClass: "valid success-alert",
+
+                //rules start codes
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 3,
+                        maxlength: 8,
+                    },
+                    password: {
+                        required: true,
+                        minlength: 3,
+                        maxlength: 8,
+                        number: true,
+
+                        // // min: 8,
+                        // minlength:8,
+                        password: true,
+                        // pwcheck: true,
+                    },
+                    password_confirm: {
+                        minlength: 3,
+                        maxlength: 8,
+                        equalTo: "#password"
+                    },
+                    email: {
+                        required: true,
+                        email: true,
+                    },
+                },
+                
+                //message
+                messages: {
+                    name: {
+                        minlength: "Minumum 3 karakter giriniz",
+                        maxlength: "Maksimum 8 karakter giriniz",
+                        required: "Ad alanı boş geçemezsiniz",
+                    },
+                    password: {
+                        required: "Şifre  alanını boş geçemezsiniz",
+                        number: "Lütfen sayısal değer giriniz",
+                        // min: "şifre için en az 8 karakter olmalı",
+                        minlength: "şifre için en az 3 karakter olmalı",
+                        maxlength: "Maksimum 8 karakter giriniz",
+                    },
+                    email: {
+                        required: "Email alanını boş geçemezsiniz",
+                        email: "Email formatında girmediniz örneğin: xyz@deneme.com",
+                    },
+                },
+            });
+        });
+    </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+        </script>
+
+</body>
+
+</html>
