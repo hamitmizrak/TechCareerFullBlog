@@ -16,6 +16,9 @@ $(function () {
   // JQUERY
   //HTML
   $('#jquery_id').html('<b> <i>jquery buradaydı </i> </b>')
+  $('#jquery_id2').text('<b> <i>jquery buradaydı </i> </b>')
+
+  
 
   //CSS
   $('#jquery_id')
@@ -44,4 +47,9 @@ $(function () {
   }
   $('#deneme33').css(objectCss);
 
+  $('img').attr("src");
+  $('img').click(function ())
+
 })
+
+//toggleClass(),attr(),removeAttr(),val(),hide(),show(),fade(),slide(),animate(),stop()

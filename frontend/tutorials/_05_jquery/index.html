@@ -15,15 +15,31 @@
 
     <!-- external js -->
     <script src="jquery.js"></script>
+    <style>
+        .classJquery{
+            background: purple;
+            color:red;
+            font-size:25px;
+        }
+    </style>
+    <script>
+        $(function () {
+            
+            // $("#addId").css("color","red");
+            $("#addId").addClass("classJquery");
+            // $("#addId").removeClass("classJquery");
+        });
+    </script>
 </head>
 
 <body class="container">
     <!-- start codes -->
     <div>
-        <p id="jquery_id">Normal bir yazıyım </p>
+        <p id="jquery_id">Normal bir yazıyım-1 </p>
+        <p id="jquery_id2">Normal bir yazıyım-2 </p>
     </div>
     <p>html</p>
-    <p>js</p>
+    <p id="addId">js Lorem ipsum dolor sit amet.</p>
 
     <ul>
         <li>css 1</li>
@@ -34,6 +50,7 @@
 
     <p id="deneme44">lorem</p>
     <p id="deneme33">lorem33</p>
+    <img src="" alt="">
 
 
     <!-- ends codes -->
