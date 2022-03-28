@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Js</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS v5.0.2 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <!-- internal JS -->
+    <!-- <script>
+    alert("Merhabalar internal js")
+</script> -->
+
+
+<!-- external js -->
+<script src="template01.js"></script>
+<!-- <script>
+    //Sağ click closed
+    $(document).ready(function () {
+        $(this).on("contextmenu", function () {
+            return false;
+        })
+    });
+</script> -->
+
+<style>
+    .cssAllDom{
+        width: 25%;
+        height: 250px;
+        background-color: red;
+        color:orange;
+    }
+</style>
+
+</head>
+
+<body class="container">
+    <!-- start codes -->
+    <h2>Mouse Event</h2>
+<button onclick="toplama()" class="btn btn-primary ml-3 mt-3">onClick</button>
+<button ondblclick="toplama()" class="btn btn-danger ml-3 mt-3">ondblclick</button>
+
+<button onmousedown="toplama()" class="btn btn-success ml-3 mt-3">onmousedown</button>
+
+<!-- <button onmouseleave="toplama()" class="btn btn-success ml-3 mt-3">onmouseleave</button> -->
+
+<hr>
+<br><br><br>
+<h2>Klavye Event</h2>
+<button onkeydown="toplama()" class="btn btn-primary ml-3 mt-3">onkeydown</button>
+<hr>
+<h2>Dom:</h2>
+<!-- Document Object Model -->
+<!-- document: çalıştığımız Html sayfasıdır -->
+<!-- dom=JS ile Html veya Css bileşenlerini yönetmeye denir -->
+<p id="paragraf_id" name="paragraf_name" class="paragraf_class"></p>
+
+<button onclick="changeParagraf()" class="btn btn-primary ml-3 mt-3">Dom Click</button>
+<hr>
+
+<div id="div_dom"></div>
+
+
+<button onclick="changeDiv()" class="btn btn-primary ml-3 mt-3">Div Click</button>
+
+<script>
+    function changeDiv(){
+  let valueParagraf=document.getElementById("div_dom");
+  valueParagraf.classList.add("cssAllDom");
+}
+</script>
+<hr>
+<a id="a_id" href="https://www.techcareer.net/mainpage/en/" target="_blank">techcareer</a>
+
+
+<!-- <form action="">
+    <input type="radio" name="adi" id="x1"> JS <br>
+    <input type="radio" name="adi" id="x2"> Bootstrap <br>
+</form> -->
+
+    <!-- ends codes-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>
