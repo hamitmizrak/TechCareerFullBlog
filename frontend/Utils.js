@@ -38,4 +38,21 @@
 //     "javascript": "javascriptreact"
 //   },
 
+//////////////////////////////////
+//REACT
+// <!-- react CDN -->
+// <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+// <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+// <script>
+//     var template = React.createElement("h3", null, "babel olmadan yazıldı");
+//     var root = document.getElementById("root");
+//     ReactDOM.render(template, root);
+// </script>
+
+////////////////////////////////
+//BABEL
+// npm i --save-dev @babel/core @babel/cli (save-dev: projenin bir parçası olmasını sağlamak)
+// npm i --save-dev @babel/core@7.17.1 @babel/cli@7.17.2
+
 
