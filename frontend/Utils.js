@@ -29,6 +29,7 @@
 // npm install -g live-server
 // npm install (package.json'deki dependency içeriğine göre tekrardan yükler)
 // npm config set prefix/usr/local (aman dikkat ==> bu kod npm setller )
+// live-server public
 
 
 //////////////////////////////////
@@ -56,5 +57,9 @@
 // SÜRÜM DEĞİŞTİMEK İSTERSEK KULLANALIM  npm install --save-dev @babel/core@7.17.1 @babel/cli@7.17.2
 // npm install --save-dev @babel/preset-env
 // npm install --save-dev @babel/preset-react
+
+//npx babel --help
+//npx babel src/app.js  --out-file=public/app.js
+//npx babel src/app.js  --out-file=public/app.js --watch
 
 
