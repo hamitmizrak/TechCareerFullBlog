@@ -50,9 +50,11 @@
 //     ReactDOM.render(template, root);
 // </script>
 
-////////////////////////////////
-//BABEL
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// BABEL
 // npm i --save-dev @babel/core @babel/cli (save-dev: projenin bir parçası olmasını sağlamak)
 // npm i --save-dev @babel/core@7.17.1 @babel/cli@7.17.2
+// npm install --save-dev @babel/preset-env
+// npm install --save-dev @babel/preset-react
 
 
