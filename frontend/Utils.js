@@ -63,3 +63,16 @@
 //npx babel src/app.js  --out-file=public/app.js --watch
 
 
+//automatic live-server and babel
+//PACKAGE.JSON
+// "scripts": {
+//     "test": "echo \"Error: no test specified\" && exit 1",
+//     "start" :"live-server public" ,
+//     "babel" :"npx babel src/app.js --out-file=public/app.js --watch"
+//   },
+
+//teminali kapatmak istersek ==> Ctrl+c
+//npm run  babel
+//npm run start
+
+
