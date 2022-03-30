@@ -1,18 +1,26 @@
 // $("").
 
+
+
+
 //modal active
 $(function () {
   $('#btn_giris').click(function () {
     $('#myUye').modal('show')
   })
 
-  $('#deneme44').css('color', 'red').css('background', 'black')
+  $('#deneme44').css('color', 'red').css('background', 'black');
+
+  function onSubmitFunction(){
+    alert("submitted value 44");
+  }
 })
 
 //form validation
 $(function () {
   //Submit  Tıklandığında
   $('#btnSubmit').click(function () {
+      
     //input içeriği aldım
     let email, password
     email = $('#user_email').val()
@@ -23,10 +31,14 @@ $(function () {
       $('#validation_email').html('email boş geçilemez....')
     } else if (validateEmail(email) == false) {
       $('#validation_email').html('email uygun formatta girmediniz....')
+    }else{
+        $('#validation_email').html('')
     }
     //validation Password
     if (password == '') {
       $('#validation_password').html('Şifre boş geçilemez....')
+    }else{
+        $('#validation_password').html('')
     }
 
     function validateEmail(email){
