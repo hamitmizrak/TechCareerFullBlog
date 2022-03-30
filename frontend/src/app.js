@@ -54,11 +54,28 @@ let templateLiteralInterpolation=`Adım: ${number1}`;
 //TS data type: String, Number, Boolean,static,class Array, Enum, Tuple, generics'
 
  //++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ var deneme55={};
+ console.log(deneme55)
+
+ //constructor
+let Student=function Student(adi,soyadi,yas){
+this.adi=adi;
+this.soyadi=soyadi;
+this.yas=yas;
+console.log(this);
+}
+
+//instance (new)
+var instanceValue= new Student("Hamit","Mızrak",37);
+
+//hasOwnProperty: buradaki değer constructrudaki eleman mı ?
+console.log(instanceValue.hasOwnProperty("soyadi"));
+
+//prototype
+//Student.prototype.
 
 
-
-
- 
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
 //  var variable1,variable2,variable3,variable4;
 //  variable1="Html5";
 //  variable2="Css3";
