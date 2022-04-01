@@ -180,4 +180,29 @@ function formTutorial() {
   ReactDOM.render(form, document.getElementById('todolistId'));
 }
 
-formTutorial();
+formTutorial(); //+++++++++++++++++++++++++++++++
+//object
+
+var object = {};
+console.log(object); //constructor
+
+var Student = function Student(adi, soyadi, yas) {
+  this.adi = adi;
+  this.soyadi = soyadi;
+  this.yas = yas;
+  console.log(this);
+}; //instance
+//hasOwnPropert: Bu objede var mı yok mu ?
+
+
+var instanceData = new Student("Adi44", "Soyadi44", 37);
+console.log(instanceData.hasOwnProperty("soyadi")); //Object Create
+
+var instanceData2 = Object.create(Student);
+console.log(instanceData2); //property
+
+Student.prototype.birthYear = function () {
+  return new Date().getFullYear() - this.yas;
+};
+
+console.log("Adı: " + instanceData.adi + "  Doğum Tarihi: " + instanceData.birthYear());
