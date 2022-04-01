@@ -31,7 +31,7 @@
         <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script> 
     -->
 
-    
+
 
 </head>
 
@@ -58,6 +58,12 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+
+                    <li class="nav-item">
+                        <a data-bs-toggle="modal" data-bs-target="#todolist" href="#">
+                            <i class="fa fa-th-list  text-warning mr-5"></i> Todo List </a>
+                    </li>
+
                     <li class="nav-item">
                         <a data-bs-toggle="modal" data-bs-target="#timer" href="#">
                             <i class="fa-solid fa-clock-o  text-warning mr-5"></i> Timer </a>
@@ -140,60 +146,61 @@
     </script>
 
 
-<!-- timer start -->
-<!-- Modal -->
-<div class="modal fade" id="timer" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Timer</h5>
-                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="card">
-
+    <!-- timer start -->
+    <!-- Modal -->
+    <div class="modal fade" id="todolist" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Kapat</button>
-                <button type="button" class="btn btn-primary">Kaydet</button>
+                <div class="modal-body">
+                    <div class="card">
+                        <div id="todolistId"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-primary">Kaydet</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- shopping start -->
-<!-- Modal -->
-<div class="modal fade" id="shopping" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Shopping</h5>
-                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="card">
-                    <img class="card-img-top " src="img/peace-gd361c86f0_1920.jpg" style="width: 100%;" alt="">
-                    <div class="card-body">
-                        <h6 class="card-title">Çiçek</h6>
-                        <div id="timer_id"></div>
-                        <p class="card-text"> <del>20</del>TL 19.99 TL</p>
-                        <div class="container">
-                            <div class="row">
-                                <div id="plus_minus"></div>
-                                
+    <!-- shopping start -->
+    <!-- Modal -->
+    <div class="modal fade" id="shopping" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Shopping</h5>
+                    <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="card">
+                        <img class="card-img-top " src="img/peace-gd361c86f0_1920.jpg" style="width: 100%;" alt="">
+                        <div class="card-body">
+                            <h6 class="card-title">Çiçek</h6>
+                            <div id="timer_id"></div>
+                            <p class="card-text"> <del>20</del>TL 19.99 TL</p>
+                            <div class="container">
+                                <div class="row">
+                                    <div id="plus_minus"></div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Kapat</button>
-                <button type="button" class="btn btn-primary">Kaydet</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-primary">Kaydet</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <!-- login ends -->
 
