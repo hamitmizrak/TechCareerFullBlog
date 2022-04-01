@@ -42,3 +42,79 @@ $(function () {
     }
   });
 }); //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//  var root=document.getElementById("react_root");
+//  var template=(
+//    <div>
+//      <hr />
+//      <h2>React DOM</h2>
+//      <button className="btn btn-primary " style={{fontSize:"55px"}} >Gönder Dom</button>
+//      <hr />
+//    </div>
+//  );
+//  ReactDOM.render(template,root);
+//    JS                      React
+//   ------                  ---------
+//    deneme                  {deneme}
+//    onclick="deneme()"      onClick={deneme} 
+//    Bootstrap               React
+//    ------                  ---------
+//    class                   className
+//    Css                     React
+//    ------                  ---------
+//    style                   style={{fontSize:25px;}}
+//basket start
+
+var counter = 0; //Artırmak
+
+var counterPlus = function counterPlus() {
+  counter++;
+  againCall();
+  console.log("Artırıldı");
+}; //Azaltmak
+
+
+var counterMinus = function counterMinus() {
+  counter--;
+  againCall();
+  console.log("Azaltıldı");
+}; //Event
+
+
+function againCall() {
+  var eventTuto = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "row"
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "col-md-8"
+  }, /*#__PURE__*/React.createElement("p", null, "Adet: ", counter)), /*#__PURE__*/React.createElement("div", {
+    className: "col-md-2"
+  }, " ", /*#__PURE__*/React.createElement("button", {
+    onClick: counterPlus,
+    className: "btn btn-primary",
+    style: {
+      fontSize: "14px"
+    },
+    id: "plus_id"
+  }, "+")), /*#__PURE__*/React.createElement("div", {
+    className: "col-md-2"
+  }, " ", /*#__PURE__*/React.createElement("button", {
+    onClick: counterMinus,
+    className: "btn btn-danger",
+    style: {
+      fontSize: "14px"
+    },
+    id: "plus_id"
+  }, "-")))));
+  ReactDOM.render(eventTuto, document.getElementById("plus_minus"));
+}
+
+againCall(); //Timer
+
+function timerClock() {
+  var time = /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", null, /*#__PURE__*/React.createElement("b", null, "  ", new Date().toLocaleTimeString(), "  ")));
+  ReactDOM.render(time, document.getElementById("timer_id"));
+} //bir metodu sürekli belirli aralıklarda çağırmak istersek
+
+
+setInterval(timerClock, 1000);

@@ -22,7 +22,7 @@
     <!-- Jquery ui  and js    -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    
+
     <!-- react libraries -->
     <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
@@ -31,7 +31,7 @@
         <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script> 
     -->
 
-    <script src="template.js"></script>
+    
 
 </head>
 
@@ -55,6 +55,16 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">Hakkımızda</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a data-bs-toggle="modal" data-bs-target="#timer" href="#">
+                            <i class="fa-solid fa-clock-o  text-warning mr-5"></i> Timer </a>
+                    </li>
+                    <li class="nav-item">
+                        <a data-bs-toggle="modal" data-bs-target="#shopping" href="#">
+                            <i class="fa fa-shopping-basket text-warning mr-3"></i> Shop </a>
                     </li>
                 </ul>
 
@@ -130,6 +140,61 @@
     </script>
 
 
+<!-- timer start -->
+<!-- Modal -->
+<div class="modal fade" id="timer" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Timer</h5>
+                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Kapat</button>
+                <button type="button" class="btn btn-primary">Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- shopping start -->
+<!-- Modal -->
+<div class="modal fade" id="shopping" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Shopping</h5>
+                <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="card">
+                    <img class="card-img-top " src="img/peace-gd361c86f0_1920.jpg" style="width: 100%;" alt="">
+                    <div class="card-body">
+                        <h6 class="card-title">Çiçek</h6>
+                        <div id="timer_id"></div>
+                        <p class="card-text"> <del>20</del>TL 19.99 TL</p>
+                        <div class="container">
+                            <div class="row">
+                                <div id="plus_minus"></div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Kapat</button>
+                <button type="button" class="btn btn-primary">Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
+
     <!-- login ends -->
 
     <!--modal start register  -->
@@ -193,6 +258,7 @@
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-8">
+                    <div id="react_root"></div>
                     <!-- SOL TARAF -->
                     <div class="card left_side">
                         <img class="card-img-top" src="img/peace-gd361c86f0_1920.jpg" alt="resim yok">
@@ -367,6 +433,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js "></script>
 
+    <script src="template.js"></script>
 </body>
 
 </html>
