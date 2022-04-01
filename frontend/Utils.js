@@ -1,3 +1,6 @@
+//npm run babel
+//npm run start
+
 //Download: => https://nodejs.org/en/
 // node -v     ==> v16.14.2
 

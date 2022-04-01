@@ -5,8 +5,8 @@
   "main": "Utils.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" :"live-server public" ,
-    "babel" :"npx babel src/app.js --out-file=public/app.js --watch"
+    "start" :"live-server" ,
+    "babel" :"npx babel src/app.js --out-file=template.js --watch"
   },
   "keywords": [],
   "author": "",
