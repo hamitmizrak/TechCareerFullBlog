@@ -335,14 +335,17 @@ let repeat=new Array(m+1).join(this)
 
 //callback:
 //1-Adım içerdeki function yazılır.
-function ikinci(deger){
-  console.log(deger)
-}
 
 function birinci(x1,x2,callback){
   let multiple=x1*x2;
   callback(multiple)
 }
+
+function ikinci(deger){
+  console.log(deger)
+}
+
+
 
 birinci(4,5,ikinci)
 

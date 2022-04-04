@@ -290,13 +290,13 @@ String.prototype.wordRepetition = function (m) {
 //1-Adım içerdeki function yazılır.
 
 
-function ikinci(deger) {
-  console.log(deger);
-}
-
 function birinci(x1, x2, callback) {
   var multiple = x1 * x2;
   callback(multiple);
+}
+
+function ikinci(deger) {
+  console.log(deger);
 }
 
 birinci(4, 5, ikinci); // "use strict";
