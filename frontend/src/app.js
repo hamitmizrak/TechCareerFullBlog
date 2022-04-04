@@ -148,9 +148,9 @@ var listItemObject = {
 }
 
 //LIST CLEAR
-let clearList=function(){
-  listItemObject.data=[];
-  formTutorial();
+let clearList = function () {
+  listItemObject.data = []
+  formTutorial()
 }
 
 //onSubmit
@@ -163,7 +163,7 @@ function formOnSubmit(event) {
     listItemObject.data.push(formInputData)
     formTutorial()
     console.log('Eklendi: ' + formInputData)
-    event.target.elements.formInput.value='';
+    event.target.elements.formInput.value = ''
   }
 }
 
@@ -180,27 +180,33 @@ function formTutorial() {
       {
         <ul>
           {listItemObject.data.map((temp) => {
-            return <li key={temp.toString()} > {temp} </li>
+            return <li key={temp.toString()}> {temp} </li>
           })}
         </ul>
       }
 
       <form onSubmit={formOnSubmit}>
         <div className="row">
-
           <div className="col-md-6">
             <input type="text" className="form-control" name="formInput" />
           </div>
 
           <div className="col-md-6">
-            <button className="btn btn-warning mr-3" style={{fontSize:".6rem"}} type="submit">
+            <button
+              className="btn btn-warning mr-3"
+              style={{ fontSize: '.6rem' }}
+              type="submit"
+            >
               Gönder
             </button>
-            <button onClick={clearList} className="btn btn-danger" style={{fontSize:".6rem"}}>
+            <button
+              onClick={clearList}
+              className="btn btn-danger"
+              style={{ fontSize: '.6rem' }}
+            >
               temizle
             </button>
           </div>
-         
         </div>
       </form>
     </div>
@@ -212,38 +218,77 @@ formTutorial()
 
 //+++++++++++++++++++++++++++++++
 //object
-var object={};
-console.log(object);
+var object = {}
+console.log(object)
 
 //constructor
-let Student =function Student(adi,soyadi,yas){
-  this.adi=adi;
-  this.soyadi=soyadi;
-  this.yas=yas;
+let Student = function Student(adi, soyadi, yas) {
+  this.adi = adi
+  this.soyadi = soyadi
+  this.yas = yas
   console.log(this)
 }
 
 //instance
 //hasOwnPropert: Bu objede var mı yok mu ?
-var instanceData=new Student("Adi44","Soyadi44",37);
-console.log(instanceData.hasOwnProperty("soyadi"));
+var instanceData = new Student('Adi44', 'Soyadi44', 37)
+console.log(instanceData.hasOwnProperty('soyadi'))
 
 //Object Create
-var instanceData2=Object.create(Student);
+var instanceData2 = Object.create(Student)
 console.log(instanceData2)
 
 //property
-Student.prototype.birthYear=function(){
-  return new Date().getFullYear()-this.yas;
+Student.prototype.birthYear = function () {
+  return new Date().getFullYear() - this.yas
 }
-console.log("Adı: "+instanceData.adi+"  Doğum Tarihi: "+instanceData.birthYear())
-
+console.log(
+  'Adı: ' + instanceData.adi + '  Doğum Tarihi: ' + instanceData.birthYear(),
+)
 
 //built-in-constructor
-String.prototype.karesi=function(n){
-  return n*n;
+String.prototype.karesi = function (n) {
+  return n * n
 }
+console.log('X'.karesi(5))
 
-console.log("X".karesi(5))
+//mutlak değerli kendi String functionımı oluşturualım ?
+//mutlakDeger
+String.prototype.mutlakDeger = function (n) {
+  if (n > 0) return n
+  else return -n
+}
+console.log('Mutlak'.mutlakDeger(5))
 
+//verilen iki sayının küçük olanın bulsun kucukSayi
+String.prototype.kucukSayi = function (x1, x2) {
+  if (x1 > x2) return x2
+  else return x1
+}
+console.log('kucuk'.kucukSayi(-150, 10))
 
+//dizideki elemanlarda silmek
+//["js","jquery","bootstrap"]
+//diziIndexDelete["bootstrap"]
+let dizi = ['js', 'jquery', 'bootstrap'];
+console.log(dizi)
+
+//dizideki elemanı silme
+Array.prototype.arrayIndexDelete = function (data) {
+  let index = this.indexOf(data)
+  if (index > -1) {
+    this.splice(index, 1)
+  }
+  return this
+}
+console.log(dizi.arrayIndexDelete('js'))
+
+//repeat
+console.log(new Array(4+1).join(1))
+
+//String tekrar eden
+String.prototype.wordRepetition=function(m){
+let repeat=new Array(m+1).join(this)
+  return repeat;
+}
+console.log("Kelime".concat(" ").wordRepetition(2))
