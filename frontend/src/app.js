@@ -314,3 +314,22 @@ const asenkron=()=>{
 asenkron();
 console.log("senkron 3.satır");
 
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//ES3:Javascript: 1995
+//ES5:Ecma-262 Edition(2009)
+//ES5 Özellikler
+//1-) "use strict";
+//2-) built-in-constructor built-in-constructor
+//3-) Array.isArray()
+//4-) Array.forEach() ==> döngü
+//5-) Array.filter()  ==> objeden istediklerimiz gelsin
+//6-) Array.map()     ==> objelerdeki bütün datalara erişmek
+//7-) Array.indexOf()
+//8-) Array.lastOf()
+//9-) JSON.parse()
+//10-) JSON.stringifly()
+//11-) Date.now()
+//+++++++++++++++++++++++++++++++++++
+//JS single-threaded
+
