@@ -286,8 +286,11 @@ String.prototype.wordRepetition = function (m) {
 //11-) Date.now()
 //+++++++++++++++++++++++++++++++++++
 //JS single-threaded
+// "use strict";
 //callback:
-//1-Adım içerdeki function yazılır.
+//1.örnek
+//1-Adım callback function yazılır.
+//2.Adım içerdeki function yazılır
 
 
 function birinci(x1, x2, callback) {
@@ -297,10 +300,78 @@ function birinci(x1, x2, callback) {
 
 function ikinci(deger) {
   console.log(deger);
+} //birinci(4,5,ikinci)
+//callback:
+//2.örnek
+//sıfır(0) başlasun kullanıcıdan alınan sayıya kadar döngüdeki sayılardan çift olanları ekranda gösteren callbackfunction yazalım ?
+
+
+function evenNumberArray(callback) {
+  var evenArray = [];
+  var pro = Number(prompt("Lütfen bir sayı giriniz"));
+
+  for (var i = 0; i <= pro; i++) {
+    if (i % 2 == 0) {
+      evenArray.push(i);
+    }
+  }
+
+  callback(evenArray);
 }
 
-birinci(4, 5, ikinci); // "use strict";
-// //Normal
+function showMessage(data) {
+  console.log(data);
+} //evenNumberArray(showMessage);
+//callback hell
+//Anonymous Function
+
+
+var es5Anonymous = function es5Anonymous() {
+  console.log("ES5");
+}; //+++++++++++++++
+//DİZİ ==> Map , Filter ,forEach
+
+
+var product = [{
+  productName: "Msi1",
+  productPrice: 1000
+}, {
+  productName: "Msi2",
+  productPrice: 2000
+}, {
+  productName: "Msi3",
+  productPrice: 3000
+}, {
+  productName: "Msi4",
+  productPrice: 4000
+}]; //console.log(product)
+//Map
+
+var es5Map = product.map(function (temp) {
+  return temp.productName;
+}); //console.log(es5Map)
+//Filter
+
+var es5Filter = product.filter(function (temp) {
+  return temp.productPrice >= 3000;
+}); //console.log(es5Filter)
+////////////////
+//OBJECT ==> this , forEach
+
+var person = {
+  name: "Hamit",
+  surname: "Mızrak",
+  java: ["servlet", "Jsp", "JSF", "Spring MVC", "Spring Data", "Spring Security"],
+  getJava: function getJava() {
+    console.log("dışardan çağırdım " + this.name);
+    var mecbur = this;
+    this.java.forEach(function (temp) {
+      console.log(temp);
+      console.log(mecbur.name);
+    });
+  }
+};
+person.getJava(); // //Normal
 // function normal(){}
 // //ES5 (anonymous function)
 // var es5=function(){}
