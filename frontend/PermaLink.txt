@@ -1,2 +1,16 @@
 https://github.com/hamitmizrak/TechCareerNetFrontEnd
 https://github.com/hamitmizrak/techcareer_blog_project
+
+drwx------ =700
+r=4
+w=2
+x=1
+
+
+ls -al 
+cd frontend 
+ctrl+C =Çıkış
+clear 
+
+npm run babel 
+npm run start

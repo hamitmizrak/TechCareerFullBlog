@@ -205,4 +205,10 @@ Student.prototype.birthYear = function () {
   return new Date().getFullYear() - this.yas;
 };
 
-console.log("Adı: " + instanceData.adi + "  Doğum Tarihi: " + instanceData.birthYear());
+console.log("Adı: " + instanceData.adi + "  Doğum Tarihi: " + instanceData.birthYear()); //built-in-constructor
+
+String.prototype.karesi = function (n) {
+  return n * n;
+};
+
+console.log("X".karesi(5));
