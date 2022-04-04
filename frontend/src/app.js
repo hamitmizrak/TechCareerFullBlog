@@ -219,7 +219,7 @@ formTutorial()
 //+++++++++++++++++++++++++++++++
 //object
 var object = {}
-console.log(object)
+//console.log(object)
 
 //constructor
 let Student = function Student(adi, soyadi, yas) {
@@ -231,26 +231,24 @@ let Student = function Student(adi, soyadi, yas) {
 
 //instance
 //hasOwnPropert: Bu objede var mı yok mu ?
-var instanceData = new Student('Adi44', 'Soyadi44', 37)
-console.log(instanceData.hasOwnProperty('soyadi'))
+//var instanceData = new Student('Adi44', 'Soyadi44', 37)
+//console.log(instanceData.hasOwnProperty('soyadi'))
 
 //Object Create
 var instanceData2 = Object.create(Student)
-console.log(instanceData2)
+//console.log(instanceData2)
 
 //property
 Student.prototype.birthYear = function () {
   return new Date().getFullYear() - this.yas
 }
-console.log(
-  'Adı: ' + instanceData.adi + '  Doğum Tarihi: ' + instanceData.birthYear(),
-)
+//console.log('Adı: ' + instanceData.adi + '  Doğum Tarihi: ' + instanceData.birthYear(),)
 
 //built-in-constructor
 String.prototype.karesi = function (n) {
   return n * n
 }
-console.log('X'.karesi(5))
+//console.log('X'.karesi(5))
 
 //mutlak değerli kendi String functionımı oluşturualım ?
 //mutlakDeger
@@ -258,20 +256,20 @@ String.prototype.mutlakDeger = function (n) {
   if (n > 0) return n
   else return -n
 }
-console.log('Mutlak'.mutlakDeger(5))
+//console.log('Mutlak'.mutlakDeger(5))
 
 //verilen iki sayının küçük olanın bulsun kucukSayi
 String.prototype.kucukSayi = function (x1, x2) {
   if (x1 > x2) return x2
   else return x1
 }
-console.log('kucuk'.kucukSayi(-150, 10))
+//console.log('kucuk'.kucukSayi(-150, 10))
 
 //dizideki elemanlarda silmek
 //["js","jquery","bootstrap"]
 //diziIndexDelete["bootstrap"]
 let dizi = ['js', 'jquery', 'bootstrap'];
-console.log(dizi)
+////console.log(dizi)
 
 //dizideki elemanı silme
 Array.prototype.arrayIndexDelete = function (data) {
@@ -281,14 +279,14 @@ Array.prototype.arrayIndexDelete = function (data) {
   }
   return this
 }
-console.log(dizi.arrayIndexDelete('js'))
+//console.log(dizi.arrayIndexDelete('js'));
 
 //repeat
-console.log(new Array(4+1).join(1))
+//console.log(new Array(4+1).join(1));
 
 //String tekrar eden
 String.prototype.wordRepetition=function(m){
 let repeat=new Array(m+1).join(this)
   return repeat;
 }
-console.log("Kelime".concat(" ").wordRepetition(2))
+//console.log("Kelime".concat(" ").wordRepetition(2))
