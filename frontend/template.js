@@ -249,3 +249,29 @@ String.prototype.wordRepetition = function (m) {
   var repeat = new Array(m + 1).join(this);
   return repeat;
 }; //console.log("Kelime".concat(" ").wordRepetition(2))
+//+++++++++++++++++++++++++++++++++++++++++++++++
+//Senkron Asenkron
+//Single threaded çalışır
+//Senkron:aynı anda sadece 1 tane process çalışması
+
+
+console.log("senkron 1.satır");
+
+var deneme = function deneme() {
+  console.log("senkron 2.satır");
+};
+
+deneme();
+console.log("senkron 3.satır");
+console.log("**********************************************"); //Asenkron:
+
+console.log("asenkron 1.satır");
+
+var asenkron = function asenkron() {
+  setTimeout(function () {
+    console.log("asenkron 2.satır");
+  }, 4000);
+};
+
+asenkron();
+console.log("senkron 3.satır");
