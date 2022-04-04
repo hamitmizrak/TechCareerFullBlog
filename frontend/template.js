@@ -253,28 +253,23 @@ String.prototype.wordRepetition = function (m) {
 //Senkron Asenkron
 //Single threaded çalışır
 //Senkron:aynı anda sadece 1 tane process çalışması
-
-
-console.log("senkron 1.satır");
-
-var deneme = function deneme() {
-  console.log("senkron 2.satır");
-};
-
-deneme();
-console.log("senkron 3.satır");
-console.log("**********************************************"); //Asenkron:
-
-console.log("asenkron 1.satır");
-
-var asenkron = function asenkron() {
-  setTimeout(function () {
-    console.log("asenkron 2.satır");
-  }, 4000);
-};
-
-asenkron();
-console.log("senkron 3.satır"); //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// console.log("senkron 1.satır")
+// var deneme=function(){
+//   console.log("senkron 2.satır")
+// }
+// deneme();
+// console.log("senkron 3.satır");
+// console.log("**********************************************")
+//Asenkron:
+// console.log("asenkron 1.satır")
+// const asenkron=()=>{
+//   setTimeout(()=>{
+//     console.log("asenkron 2.satır");
+//   },4000)
+// }
+// asenkron();
+// console.log("senkron 3.satır");
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //ES3:Javascript: 1995
 //ES5:Ecma-262 Edition(2009)
 //ES5 Özellikler
@@ -291,3 +286,25 @@ console.log("senkron 3.satır"); //+++++++++++++++++++++++++++++++++++++++++++++
 //11-) Date.now()
 //+++++++++++++++++++++++++++++++++++
 //JS single-threaded
+//callback:
+//1-Adım içerdeki function yazılır.
+
+
+function ikinci(deger) {
+  console.log(deger);
+}
+
+function birinci(x1, x2, callback) {
+  var multiple = x1 * x2;
+  callback(multiple);
+}
+
+birinci(4, 5, ikinci); // "use strict";
+// //Normal
+// function normal(){}
+// //ES5 (anonymous function)
+// var es5=function(){}
+// //ES6 Arrow function
+// var es6=()=>{}
+//synchronous  (Senkron)  ==> sıralı bir şekilde devam ediyor
+//asynchronous (Asenkron) ==> aynı andan birden fazla process çalışması
