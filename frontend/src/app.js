@@ -589,7 +589,11 @@ let proPriceMap2=product33.map((data)=>data.proPrice);
 // console.log(proPriceMap2)
 
 ///////////////////////////////////////
-
+//argument Fonksiyona gelene dataların hepsini almak için kullanıyoruz
+const argumentData=function(){
+  console.log(arguments);
+}
+argumentData(5,6,3,9)
 
 
 //////////////////////////////////////////////////////////////////////////////

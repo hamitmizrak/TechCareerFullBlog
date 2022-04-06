@@ -527,7 +527,13 @@ var proPriceMap2 = product33.map(function (data) {
   return data.proPrice;
 }); // console.log(proPriceMap2)
 ///////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
+//argument Fonksiyona gelene dataların hepsini almak için kullanıyoruz
+
+var argumentData = function argumentData() {
+  console.log(arguments);
+};
+
+argumentData(5, 6, 3, 9, "Veri"); //////////////////////////////////////////////////////////////////////////////
 //callback()  ==> ES5
 //promise()   ==> ES6
 //async/await ==> ES7
