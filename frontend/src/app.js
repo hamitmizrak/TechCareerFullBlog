@@ -423,6 +423,7 @@ var person={
 //let -const
 //template literal ==> ``
 
+//ES6 (1) ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //(let-const)
 //  var adi="Hamit";
 //  let adi2="Hamit";
@@ -448,6 +449,29 @@ function fullName(){
 //   let yas=37;
 //   console.log(yas)
 // }
+
+//ES6 (2) ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//Template Literal: BackTick ==> ``
+//1-) Multi-line
+//2-) Interpolation
+//3-) Html Templates
+
+//1-) Multi-Line
+let deneme="Merhabalar\nNasılsınız";
+console.log(deneme)
+
+let deneme2=`Merhabalar\nNasılsınız
+JS Kursu
+`;
+console.log(deneme2)
+
+// 2.6 GHZ: 2.6 Milyar toplama
+
+//2-) Interpolation
+let firstName=`Malatya`;
+let lastName=`Battalgazi`;
+console.log("İl: "+firstName+ " İlçe:"+lastName)
+console.log(`İl: ${firstName} İlçe: ${lastName}`)
 
 
 

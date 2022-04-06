@@ -375,6 +375,7 @@ var person = {
 //ES6
 //let -const
 //template literal ==> ``
+//ES6 (1) ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //(let-const)
 //  var adi="Hamit";
 //  let adi2="Hamit";
@@ -395,3 +396,21 @@ function fullName() {
 //   let yas=37;
 //   console.log(yas)
 // }
+//ES6 (2) ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//Template Literal: BackTick ==> ``
+//1-) Multi-line
+//2-) Interpolation
+//3-) Html Templates
+//1-) Multi-Line
+
+
+var deneme = "Merhabalar\nNasılsınız";
+console.log(deneme);
+var deneme2 = "Merhabalar\nNas\u0131ls\u0131n\u0131z\nJS Kursu\n";
+console.log(deneme2); // 2.6 GHZ: 2.6 Milyar toplama
+//2-) Interpolation
+
+var firstName = "Malatya";
+var lastName = "Battalgazi";
+console.log("İl: " + firstName + " İlçe:" + lastName);
+console.log("\u0130l: ".concat(firstName, " \u0130l\xE7e: ").concat(lastName));
