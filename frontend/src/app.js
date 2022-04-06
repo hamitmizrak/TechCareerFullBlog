@@ -473,6 +473,14 @@ let lastName=`Battalgazi`;
 console.log("İl: "+firstName+ " İlçe:"+lastName)
 console.log(`İl: ${firstName} İlçe: ${lastName}`)
 
+console.log("*******************************************")
+let student={
+  name:"Hamit",
+  surname:"Mızrak"
+}
+console.log(student.surname)
+console.log(`${student.surname}`)
+
 
 
 

@@ -414,3 +414,10 @@ var firstName = "Malatya";
 var lastName = "Battalgazi";
 console.log("İl: " + firstName + " İlçe:" + lastName);
 console.log("\u0130l: ".concat(firstName, " \u0130l\xE7e: ").concat(lastName));
+console.log("*******************************************");
+var student = {
+  name: "Hamit",
+  surname: "Mızrak"
+};
+console.log(student.surname);
+console.log("".concat(student.surname));
