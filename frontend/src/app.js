@@ -422,6 +422,9 @@ var person={
 //ES6
 //let -const
 //template literal ==> ``
+//arrow function ()=>{}
+
+//Immedia function (anonymous(){})()
 
 //ES6 (1) Variable ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //(let-const)
@@ -536,6 +539,10 @@ console.log(upperValue("Kızılay"))
 let deneme77=(x,y)=>{ return x+y }
 let value77= deneme77(6,4);
 console.log(value77)
+
+/////////////////////////////////////////////////////////////////////////////
+//+++++Immedia Function++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 
 

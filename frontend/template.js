@@ -375,6 +375,8 @@ var person = {
 //ES6
 //let -const
 //template literal ==> ``
+//arrow function ()=>{}
+//Immedia function (anonymous(){})()
 //ES6 (1) Variable ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //(let-const)
 //  var adi="Hamit";
@@ -476,4 +478,5 @@ var deneme77 = function deneme77(x, y) {
 };
 
 var value77 = deneme77(6, 4);
-console.log(value77);
+console.log(value77); /////////////////////////////////////////////////////////////////////////////
+//+++++Immedia Function++++++++++++++++++++++++++++++++++++++++++++++++++++++
