@@ -406,10 +406,10 @@ function fullName() {
 //1-) Multi-Line
 
 
-var deneme = "Merhabalar\nNasılsınız";
-console.log(deneme);
-var deneme2 = "Merhabalar\nNas\u0131ls\u0131n\u0131z\nJS Kursu\n";
-console.log(deneme2); // 2.6 GHZ: 2.6 Milyar toplama
+var deneme = "Merhabalar\nNasılsınız"; // console.log(deneme)
+
+var deneme2 = "Merhabalar\nNas\u0131ls\u0131n\u0131z\nJS Kursu\n"; // console.log(deneme2)
+// 2.6 GHZ: 2.6 Milyar toplama
 //2-) Interpolation
 // let firstName=`Malatya`;
 // let lastName=`Battalgazi`;
@@ -428,55 +428,74 @@ var student = {
 
 function deneme11() {
   console.log("Normal Function");
-}
+} // deneme11()
+//ES5
 
-deneme11(); //ES5
 
 var deneme22 = function deneme22() {
   console.log("Anonymous Function");
-};
+}; // deneme22()
+//ES6
 
-deneme22(); //ES6
 
 var deneme33 = function deneme33() {
   console.log("Arrow Function");
-};
-
-deneme33();
-console.log("************************************************"); //(Parametreli Function)
+}; // deneme33()
+// console.log("************************************************")
+//(Parametreli Function)
 //Normal Parametreli
+
 
 function deneme44(adi) {
   console.log("Normal Parametreli Function", adi);
-}
+} // deneme44("Kayısı")
+//Anonymous Parametreli
 
-deneme44("Kayısı"); //Anonymous Parametreli
 
 var deneme55 = function deneme55(adi) {
   console.log("Anonymous Function ", adi);
-};
-
-deneme55("Kayısı Reçeli"); //Arrow Function Parametre
+}; // deneme55("Kayısı Reçeli")
+//Arrow Function Parametre
 //eğer curl brackets kullanmazsak return kullanmamıza gerek yok
+
 
 var deneme66 = function deneme66(x, y) {
   return x + y;
 };
 
-var value66 = deneme66(6, 4);
-console.log(value66); //examples
+var value66 = deneme66(6, 4); // console.log(value66)
+//examples
 //benim gönderdiğim veriyi Büyültsün
 
 var upperValue = function upperValue(data) {
   return data.toUpperCase();
-};
+}; // console.log(upperValue("Kızılay"))
+//eğer curl brackets yazarsam  return kullanalım
 
-console.log(upperValue("Kızılay")); //eğer curl brackets yazarsam  return kullanalım
 
 var deneme77 = function deneme77(x, y) {
   return x + y;
 };
 
-var value77 = deneme77(6, 4);
-console.log(value77); /////////////////////////////////////////////////////////////////////////////
+var value77 = deneme77(6, 4); // console.log(value77)
+/////////////////////////////////////////////////////////////////////////////
 //+++++Immedia Function++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//()();
+//Parametresiz
+
+(function deneme() {
+  console.log("Çağırmadan kullanacağım Normal Functionsın");
+})();
+
+(function () {
+  console.log("Çağırmadan kullanacağım Anonymous Functionsın");
+})();
+
+(function () {
+  console.log("Çağırmadan kullanacağım Arrow Functionsın");
+})(); //Parametreli
+
+
+(function (data) {
+  return console.log("Veri: ".concat(data));
+})("ES6");

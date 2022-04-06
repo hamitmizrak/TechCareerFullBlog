@@ -461,12 +461,12 @@ function fullName(){
 
 //1-) Multi-Line
 let deneme="Merhabalar\nNasılsınız";
-console.log(deneme)
+// console.log(deneme)
 
 let deneme2=`Merhabalar\nNasılsınız
 JS Kursu
 `;
-console.log(deneme2)
+// console.log(deneme2)
 
 // 2.6 GHZ: 2.6 Milyar toplama
 
@@ -491,58 +491,72 @@ let student={
 function deneme11(){
   console.log("Normal Function")
 }
-deneme11()
+// deneme11()
 
 
 //ES5
 var deneme22=  function (){
   console.log("Anonymous Function")
 }
-deneme22()
+// deneme22()
 
 
 //ES6
 var deneme33= ()=>{
   console.log("Arrow Function")
 }
-deneme33()
+// deneme33()
 
-console.log("************************************************")
+// console.log("************************************************")
 
 //(Parametreli Function)
 //Normal Parametreli
 function deneme44(adi){
   console.log("Normal Parametreli Function",adi)
 }
-deneme44("Kayısı")
+// deneme44("Kayısı")
 
 
 //Anonymous Parametreli
 var deneme55=  function (adi){
   console.log("Anonymous Function ",adi)
 }
-deneme55("Kayısı Reçeli")
+// deneme55("Kayısı Reçeli")
 
 //Arrow Function Parametre
 //eğer curl brackets kullanmazsak return kullanmamıza gerek yok
 let deneme66=(x,y)=>x+y;
 let value66= deneme66(6,4);
-console.log(value66)
+// console.log(value66)
 
 //examples
 //benim gönderdiğim veriyi Büyültsün
 let upperValue=(data)=>data.toUpperCase();
-console.log(upperValue("Kızılay"))
+// console.log(upperValue("Kızılay"))
 
 
 //eğer curl brackets yazarsam  return kullanalım
 let deneme77=(x,y)=>{ return x+y }
 let value77= deneme77(6,4);
-console.log(value77)
+// console.log(value77)
 
 /////////////////////////////////////////////////////////////////////////////
 //+++++Immedia Function++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//()();
+//Parametresiz
+(function deneme(){
+  console.log("Çağırmadan kullanacağım Normal Functionsın")
+})();
+(function(){
+  console.log("Çağırmadan kullanacağım Anonymous Functionsın")
+})();
 
+(()=>{
+  console.log("Çağırmadan kullanacağım Arrow Functionsın")
+})();
+
+//Parametreli
+((data)=>console.log(`Veri: ${data}`))("ES6");
 
 
 
