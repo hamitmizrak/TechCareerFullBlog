@@ -423,7 +423,7 @@ var person={
 //let -const
 //template literal ==> ``
 
-//ES6 (1) ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//ES6 (1) Variable ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //(let-const)
 //  var adi="Hamit";
 //  let adi2="Hamit";
@@ -450,7 +450,7 @@ function fullName(){
 //   console.log(yas)
 // }
 
-//ES6 (2) ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//ES6 (2) Literal ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //Template Literal: BackTick ==> ``
 //1-) Multi-line
 //2-) Interpolation
@@ -468,18 +468,75 @@ console.log(deneme2)
 // 2.6 GHZ: 2.6 Milyar toplama
 
 //2-) Interpolation
-let firstName=`Malatya`;
-let lastName=`Battalgazi`;
-console.log("İl: "+firstName+ " İlçe:"+lastName)
-console.log(`İl: ${firstName} İlçe: ${lastName}`)
+// let firstName=`Malatya`;
+// let lastName=`Battalgazi`;
+// console.log("İl: "+firstName+ " İlçe:"+lastName)
+// console.log(`İl: ${firstName} İlçe: ${lastName}`)
 
 console.log("*******************************************")
 let student={
   name:"Hamit",
   surname:"Mızrak"
 }
-console.log(student.surname)
-console.log(`${student.surname}`)
+// console.log(student.surname)
+// console.log(`${student.surname}`)
+
+//ES6 (3) Function ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//(Parametresiz Function)
+//Normal
+function deneme11(){
+  console.log("Normal Function")
+}
+deneme11()
+
+
+//ES5
+var deneme22=  function (){
+  console.log("Anonymous Function")
+}
+deneme22()
+
+
+//ES6
+var deneme33= ()=>{
+  console.log("Arrow Function")
+}
+deneme33()
+
+console.log("************************************************")
+
+//(Parametreli Function)
+//Normal Parametreli
+function deneme44(adi){
+  console.log("Normal Parametreli Function",adi)
+}
+deneme44("Kayısı")
+
+
+//Anonymous Parametreli
+var deneme55=  function (adi){
+  console.log("Anonymous Function ",adi)
+}
+deneme55("Kayısı Reçeli")
+
+//Arrow Function Parametre
+//eğer curl brackets kullanmazsak return kullanmamıza gerek yok
+let deneme66=(x,y)=>x+y;
+let value66= deneme66(6,4);
+console.log(value66)
+
+//examples
+//benim gönderdiğim veriyi Büyültsün
+let upperValue=(data)=>data.toUpperCase();
+console.log(upperValue("Kızılay"))
+
+
+//eğer curl brackets yazarsam  return kullanalım
+let deneme77=(x,y)=>{ return x+y }
+let value77= deneme77(6,4);
+console.log(value77)
+
 
 
 

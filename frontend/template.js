@@ -375,7 +375,7 @@ var person = {
 //ES6
 //let -const
 //template literal ==> ``
-//ES6 (1) ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//ES6 (1) Variable ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //(let-const)
 //  var adi="Hamit";
 //  let adi2="Hamit";
@@ -396,7 +396,7 @@ function fullName() {
 //   let yas=37;
 //   console.log(yas)
 // }
-//ES6 (2) ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//ES6 (2) Literal ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //Template Literal: BackTick ==> ``
 //1-) Multi-line
 //2-) Interpolation
@@ -409,15 +409,71 @@ console.log(deneme);
 var deneme2 = "Merhabalar\nNas\u0131ls\u0131n\u0131z\nJS Kursu\n";
 console.log(deneme2); // 2.6 GHZ: 2.6 Milyar toplama
 //2-) Interpolation
+// let firstName=`Malatya`;
+// let lastName=`Battalgazi`;
+// console.log("İl: "+firstName+ " İlçe:"+lastName)
+// console.log(`İl: ${firstName} İlçe: ${lastName}`)
 
-var firstName = "Malatya";
-var lastName = "Battalgazi";
-console.log("İl: " + firstName + " İlçe:" + lastName);
-console.log("\u0130l: ".concat(firstName, " \u0130l\xE7e: ").concat(lastName));
 console.log("*******************************************");
 var student = {
   name: "Hamit",
   surname: "Mızrak"
+}; // console.log(student.surname)
+// console.log(`${student.surname}`)
+//ES6 (3) Function ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//(Parametresiz Function)
+//Normal
+
+function deneme11() {
+  console.log("Normal Function");
+}
+
+deneme11(); //ES5
+
+var deneme22 = function deneme22() {
+  console.log("Anonymous Function");
 };
-console.log(student.surname);
-console.log("".concat(student.surname));
+
+deneme22(); //ES6
+
+var deneme33 = function deneme33() {
+  console.log("Arrow Function");
+};
+
+deneme33();
+console.log("************************************************"); //(Parametreli Function)
+//Normal Parametreli
+
+function deneme44(adi) {
+  console.log("Normal Parametreli Function", adi);
+}
+
+deneme44("Kayısı"); //Anonymous Parametreli
+
+var deneme55 = function deneme55(adi) {
+  console.log("Anonymous Function ", adi);
+};
+
+deneme55("Kayısı Reçeli"); //Arrow Function Parametre
+//eğer curl brackets kullanmazsak return kullanmamıza gerek yok
+
+var deneme66 = function deneme66(x, y) {
+  return x + y;
+};
+
+var value66 = deneme66(6, 4);
+console.log(value66); //examples
+//benim gönderdiğim veriyi Büyültsün
+
+var upperValue = function upperValue(data) {
+  return data.toUpperCase();
+};
+
+console.log(upperValue("Kızılay")); //eğer curl brackets yazarsam  return kullanalım
+
+var deneme77 = function deneme77(x, y) {
+  return x + y;
+};
+
+var value77 = deneme77(6, 4);
+console.log(value77);
