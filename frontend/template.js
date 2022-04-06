@@ -1,5 +1,27 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); Object.defineProperty(subClass, "prototype", { writable: false }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } else if (call !== void 0) { throw new TypeError("Derived constructors may only return object or undefined"); } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
 // $("").
 //modal active
 $(function () {
@@ -308,7 +330,7 @@ function ikinci(deger) {
 
 function evenNumberArray(callback) {
   var evenArray = [];
-  var pro = Number(prompt("Lütfen bir sayı giriniz"));
+  var pro = Number(prompt('Lütfen bir sayı giriniz'));
 
   for (var i = 0; i <= pro; i++) {
     if (i % 2 == 0) {
@@ -327,22 +349,22 @@ function showMessage(data) {
 
 
 var es5Anonymous = function es5Anonymous() {
-  console.log("ES5");
+  console.log('ES5');
 }; //+++++++++++++++
 //DİZİ ==> Map , Filter ,forEach
 
 
 var product = [{
-  productName: "Msi1",
+  productName: 'Msi1',
   productPrice: 1000
 }, {
-  productName: "Msi2",
+  productName: 'Msi2',
   productPrice: 2000
 }, {
-  productName: "Msi3",
+  productName: 'Msi3',
   productPrice: 3000
 }, {
-  productName: "Msi4",
+  productName: 'Msi4',
   productPrice: 4000
 }]; //console.log(product)
 //Map
@@ -359,11 +381,11 @@ var es5Filter = product.filter(function (temp) {
 //OBJECT ==> this , forEach
 
 var person = {
-  name: "Hamit",
-  surname: "Mızrak",
-  java: ["servlet", "Jsp", "JSF", "Spring MVC", "Spring Data", "Spring Security"],
+  name: 'Hamit',
+  surname: 'Mızrak',
+  java: ['servlet', 'Jsp', 'JSF', 'Spring MVC', 'Spring Data', 'Spring Security'],
   getJava: function getJava() {
-    console.log("dışardan çağırdım " + this.name);
+    console.log('dışardan çağırdım ' + this.name);
     var mecbur = this;
     this.java.forEach(function (temp) {
       console.log(temp);
@@ -384,12 +406,12 @@ var person = {
 //  const adi4="Ankara";
 //global scope
 
-var adi = "Hamit"; //Function scope
+var adi = 'Hamit'; //Function scope
 
 function fullName() {
-  var adi = "Hamit444";
-  var soyadi = "Mızrak";
-  console.log("function scope: " + " adi: " + adi + " soyadı: " + soyadi);
+  var adi = 'Hamit444';
+  var soyadi = 'Mızrak';
+  console.log('function scope: ' + ' adi: ' + adi + ' soyadı: ' + soyadi);
 } // fullName();
 // console.log("global Scope: adi ",adi)
 // console.log("function Scope: soyadi ",soyadi);
@@ -406,7 +428,7 @@ function fullName() {
 //1-) Multi-Line
 
 
-var deneme = "Merhabalar\nNasılsınız"; // console.log(deneme)
+var deneme = 'Merhabalar\nNasılsınız'; // console.log(deneme)
 
 var deneme2 = "Merhabalar\nNas\u0131ls\u0131n\u0131z\nJS Kursu\n"; // console.log(deneme2)
 // 2.6 GHZ: 2.6 Milyar toplama
@@ -416,10 +438,10 @@ var deneme2 = "Merhabalar\nNas\u0131ls\u0131n\u0131z\nJS Kursu\n"; // console.lo
 // console.log("İl: "+firstName+ " İlçe:"+lastName)
 // console.log(`İl: ${firstName} İlçe: ${lastName}`)
 
-console.log("*******************************************");
+console.log('*******************************************');
 var student = {
-  name: "Hamit",
-  surname: "Mızrak"
+  name: 'Hamit',
+  surname: 'Mızrak'
 }; // console.log(student.surname)
 // console.log(`${student.surname}`)
 //ES6 (3) Function ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -427,19 +449,19 @@ var student = {
 //Normal
 
 function deneme11() {
-  console.log("Normal Function");
+  console.log('Normal Function');
 } // deneme11()
 //ES5
 
 
 var deneme22 = function deneme22() {
-  console.log("Anonymous Function");
+  console.log('Anonymous Function');
 }; // deneme22()
 //ES6
 
 
 var deneme33 = function deneme33() {
-  console.log("Arrow Function");
+  console.log('Arrow Function');
 }; // deneme33()
 // console.log("************************************************")
 //(Parametreli Function)
@@ -447,13 +469,13 @@ var deneme33 = function deneme33() {
 
 
 function deneme44(adi) {
-  console.log("Normal Parametreli Function", adi);
+  console.log('Normal Parametreli Function', adi);
 } // deneme44("Kayısı")
 //Anonymous Parametreli
 
 
 var deneme55 = function deneme55(adi) {
-  console.log("Anonymous Function ", adi);
+  console.log('Anonymous Function ', adi);
 }; // deneme55("Kayısı Reçeli")
 //Arrow Function Parametre
 //eğer curl brackets kullanmazsak return kullanmamıza gerek yok
@@ -513,13 +535,13 @@ var filterEs6 = arr.filter(function (data) {
 //////////
 
 var product33 = [{
-  proName: "laptop-1",
+  proName: 'laptop-1',
   proPrice: 1000
 }, {
-  proName: "laptop-2",
+  proName: 'laptop-2',
   proPrice: 2000
 }, {
-  proName: "laptop-3",
+  proName: 'laptop-3',
   proPrice: 3000
 }]; //ES6
 
@@ -531,9 +553,108 @@ var proPriceMap2 = product33.map(function (data) {
 
 var argumentData = function argumentData() {
   console.log(arguments);
-};
+}; // argumentData(5,6,3,9,"Veri");
+//////////////////////////////////////////////////////////////////////////////
+//ES5
+//Class
 
-argumentData(5, 6, 3, 9, "Veri"); //////////////////////////////////////////////////////////////////////////////
+
+var Stu = function Stu(adi, soyadi, yas) {
+  //constructor
+  this.adi = adi;
+  this.soyadi = soyadi;
+  this.yas = yas;
+  console.log(this);
+}; //var sonuc = new Stu('Hamit', 'Mızrak', 37)
+//+++++++++++++++++++++++++++
+//ES6 
+//class
+
+
+var PersonEs6 = /*#__PURE__*/function () {
+  //parametreli constructor
+  function PersonEs6() {
+    var adi = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "adını girmediniz";
+    var soyadi = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "soyadını girmediniz";
+    var yas = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+
+    _classCallCheck(this, PersonEs6);
+
+    this.adi = adi;
+    this.soyadi = soyadi;
+    this.yas = yas;
+    console.log('constructor çalıştı');
+  } //metot
+
+
+  _createClass(PersonEs6, [{
+    key: "message",
+    value: function message(data) {
+      return "message: ".concat(data, " : ad\u0131: ").concat(adi);
+    }
+  }]);
+
+  return PersonEs6;
+}(); // let sonuc2 = new classEs6()
+
+
+var sonuc2 = new PersonEs6('Hamit', 'Mızrak', 37);
+console.log(sonuc2);
+console.log(sonuc2.message("Big Data 2556"));
+console.log("*****************************************"); //extends (tamamen super classtan gelen dataları kullanmak)
+
+var Teacher = /*#__PURE__*/function (_PersonEs) {
+  _inherits(Teacher, _PersonEs);
+
+  var _super = _createSuper(Teacher);
+
+  function Teacher() {
+    _classCallCheck(this, Teacher);
+
+    return _super.apply(this, arguments);
+  }
+
+  return _createClass(Teacher);
+}(PersonEs6);
+
+var sonuc3 = new Teacher('Teacher Name', 'Teacher Surname', 37);
+console.log(sonuc3); //extends (kendimize ait özellik ekleyelim)
+
+var Teacher2 = /*#__PURE__*/function (_PersonEs2) {
+  _inherits(Teacher2, _PersonEs2);
+
+  var _super2 = _createSuper(Teacher2);
+
+  function Teacher2() {
+    var _this;
+
+    var adi = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "adını girmediniz";
+    var soyadi = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "soyadını girmediniz";
+    var yas = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+    var hescode = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "hesCodes4521xc";
+
+    _classCallCheck(this, Teacher2);
+
+    _this = _super2.call(this, adi, soyadi, yas); //üst atadan gelen özellikler
+
+    _this.hescode = hescode; // yeni edindiği özellik
+
+    return _this;
+  }
+
+  _createClass(Teacher2, [{
+    key: "dataChangeExtends",
+    value: function dataChangeExtends(data) {
+      return "data: ".concat(data, " Ad\u0131:").concat(adi, "  Soyad\u0131:").concat(soyadi, "  Ya\u015F:").concat(this.yas, "  HesCode:").concat(this.hescode, " ");
+    }
+  }]);
+
+  return Teacher2;
+}(PersonEs6);
+
+var sonuc4 = new Teacher2('Teacher Name4', 'Teacher Surnam', 34, "HesCodeXYZ4");
+console.log(sonuc4);
+console.log(sonuc2.dataChangeExtends); //////////////////////////////////////////////////////////////////////////////
 //callback()  ==> ES5
 //promise()   ==> ES6
 //async/await ==> ES7

@@ -268,7 +268,7 @@ String.prototype.kucukSayi = function (x1, x2) {
 //dizideki elemanlarda silmek
 //["js","jquery","bootstrap"]
 //diziIndexDelete["bootstrap"]
-let dizi = ['js', 'jquery', 'bootstrap'];
+let dizi = ['js', 'jquery', 'bootstrap']
 ////console.log(dizi)
 
 //dizideki elemanı silme
@@ -285,9 +285,9 @@ Array.prototype.arrayIndexDelete = function (data) {
 //console.log(new Array(4+1).join(1));
 
 //String tekrar eden
-String.prototype.wordRepetition=function(m){
-let repeat=new Array(m+1).join(this)
-  return repeat;
+String.prototype.wordRepetition = function (m) {
+  let repeat = new Array(m + 1).join(this)
+  return repeat
 }
 //console.log("Kelime".concat(" ").wordRepetition(2))
 
@@ -314,7 +314,6 @@ let repeat=new Array(m+1).join(this)
 // asenkron();
 // console.log("senkron 3.satır");
 
-
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //ES3:Javascript: 1995
 //ES5:Ecma-262 Edition(2009)
@@ -335,38 +334,36 @@ let repeat=new Array(m+1).join(this)
 
 // "use strict";
 
-
 //callback:
 //1.örnek
 //1-Adım callback function yazılır.
 //2.Adım içerdeki function yazılır
-function birinci(x1,x2,callback){
-  var multiple=x1*x2;
+function birinci(x1, x2, callback) {
+  var multiple = x1 * x2
   callback(multiple)
 }
 
-function ikinci(deger){
+function ikinci(deger) {
   console.log(deger)
 }
 
 //birinci(4,5,ikinci)
 
-
 //callback:
 //2.örnek
 //sıfır(0) başlasun kullanıcıdan alınan sayıya kadar döngüdeki sayılardan çift olanları ekranda gösteren callbackfunction yazalım ?
-function evenNumberArray(callback){
-var evenArray=[];
-var pro =Number(prompt("Lütfen bir sayı giriniz"));
-for(var i=0; i<=pro; i++){
-  if(i%2==0){
-    evenArray.push(i);
+function evenNumberArray(callback) {
+  var evenArray = []
+  var pro = Number(prompt('Lütfen bir sayı giriniz'))
+  for (var i = 0; i <= pro; i++) {
+    if (i % 2 == 0) {
+      evenArray.push(i)
+    }
   }
-}
-callback(evenArray)
+  callback(evenArray)
 }
 
-function showMessage(data){
+function showMessage(data) {
   console.log(data)
 }
 
@@ -374,47 +371,53 @@ function showMessage(data){
 //callback hell
 
 //Anonymous Function
-var es5Anonymous=function(){
-  console.log("ES5")
-};
+var es5Anonymous = function () {
+  console.log('ES5')
+}
 
 //+++++++++++++++
 //DİZİ ==> Map , Filter ,forEach
-var product=[
-{productName:"Msi1",productPrice:1000},
-{productName:"Msi2",productPrice:2000},
-{productName:"Msi3",productPrice:3000},
-{productName:"Msi4",productPrice:4000}
-];
+var product = [
+  { productName: 'Msi1', productPrice: 1000 },
+  { productName: 'Msi2', productPrice: 2000 },
+  { productName: 'Msi3', productPrice: 3000 },
+  { productName: 'Msi4', productPrice: 4000 },
+]
 //console.log(product)
 
 //Map
-var es5Map=product.map(function(temp){ 
-  return   temp.productName;
-});
+var es5Map = product.map(function (temp) {
+  return temp.productName
+})
 //console.log(es5Map)
 
-
 //Filter
-var es5Filter=product.filter(function(temp){
-  return temp.productPrice>=3000;
-});
+var es5Filter = product.filter(function (temp) {
+  return temp.productPrice >= 3000
+})
 //console.log(es5Filter)
 
 ////////////////
 //OBJECT ==> this , forEach
-var person={
-  name:"Hamit",
-  surname:"Mızrak",
-  java:["servlet","Jsp","JSF","Spring MVC","Spring Data","Spring Security"],
-  getJava:function(){
-    console.log("dışardan çağırdım "+this.name)
-    var mecbur=this;
-    this.java.forEach(function (temp){
+var person = {
+  name: 'Hamit',
+  surname: 'Mızrak',
+  java: [
+    'servlet',
+    'Jsp',
+    'JSF',
+    'Spring MVC',
+    'Spring Data',
+    'Spring Security',
+  ],
+  getJava: function () {
+    console.log('dışardan çağırdım ' + this.name)
+    var mecbur = this
+    this.java.forEach(function (temp) {
       console.log(temp)
       console.log(mecbur.name)
     })
-  }
+  },
 }
 
 // person.getJava()
@@ -432,15 +435,14 @@ var person={
 //  let adi2="Hamit";
 //  const adi4="Ankara";
 
-
 //global scope
-let adi="Hamit";
+let adi = 'Hamit'
 
 //Function scope
-function fullName(){
-  let adi="Hamit444";
-  let soyadi="Mızrak";
-  console.log("function scope: "+" adi: "+adi+" soyadı: "+soyadi);
+function fullName() {
+  let adi = 'Hamit444'
+  let soyadi = 'Mızrak'
+  console.log('function scope: ' + ' adi: ' + adi + ' soyadı: ' + soyadi)
 }
 // fullName();
 
@@ -460,12 +462,12 @@ function fullName(){
 //3-) Html Templates
 
 //1-) Multi-Line
-let deneme="Merhabalar\nNasılsınız";
+let deneme = 'Merhabalar\nNasılsınız'
 // console.log(deneme)
 
-let deneme2=`Merhabalar\nNasılsınız
+let deneme2 = `Merhabalar\nNasılsınız
 JS Kursu
-`;
+`
 // console.log(deneme2)
 
 // 2.6 GHZ: 2.6 Milyar toplama
@@ -476,10 +478,10 @@ JS Kursu
 // console.log("İl: "+firstName+ " İlçe:"+lastName)
 // console.log(`İl: ${firstName} İlçe: ${lastName}`)
 
-console.log("*******************************************")
-let student={
-  name:"Hamit",
-  surname:"Mızrak"
+console.log('*******************************************')
+let student = {
+  name: 'Hamit',
+  surname: 'Mızrak',
 }
 // console.log(student.surname)
 // console.log(`${student.surname}`)
@@ -488,22 +490,20 @@ let student={
 
 //(Parametresiz Function)
 //Normal
-function deneme11(){
-  console.log("Normal Function")
+function deneme11() {
+  console.log('Normal Function')
 }
 // deneme11()
 
-
 //ES5
-var deneme22=  function (){
-  console.log("Anonymous Function")
+var deneme22 = function () {
+  console.log('Anonymous Function')
 }
 // deneme22()
 
-
 //ES6
-var deneme33= ()=>{
-  console.log("Arrow Function")
+var deneme33 = () => {
+  console.log('Arrow Function')
 }
 // deneme33()
 
@@ -511,33 +511,33 @@ var deneme33= ()=>{
 
 //(Parametreli Function)
 //Normal Parametreli
-function deneme44(adi){
-  console.log("Normal Parametreli Function",adi)
+function deneme44(adi) {
+  console.log('Normal Parametreli Function', adi)
 }
 // deneme44("Kayısı")
 
-
 //Anonymous Parametreli
-var deneme55=  function (adi){
-  console.log("Anonymous Function ",adi)
+var deneme55 = function (adi) {
+  console.log('Anonymous Function ', adi)
 }
 // deneme55("Kayısı Reçeli")
 
 //Arrow Function Parametre
 //eğer curl brackets kullanmazsak return kullanmamıza gerek yok
-let deneme66=(x,y)=>x+y;
-let value66= deneme66(6,4);
+let deneme66 = (x, y) => x + y
+let value66 = deneme66(6, 4)
 // console.log(value66)
 
 //examples
 //benim gönderdiğim veriyi Büyültsün
-let upperValue=(data)=>data.toUpperCase();
+let upperValue = (data) => data.toUpperCase()
 // console.log(upperValue("Kızılay"))
 
-
 //eğer curl brackets yazarsam  return kullanalım
-let deneme77=(x,y)=>{ return x+y }
-let value77= deneme77(6,4);
+let deneme77 = (x, y) => {
+  return x + y
+}
+let value77 = deneme77(6, 4)
 // console.log(value77)
 
 /////////////////////////////////////////////////////////////////////////////
@@ -561,47 +561,98 @@ let value77= deneme77(6,4);
 
 //////////////////////////////////////////////////////////////////////////////
 //Filter ES5-ES6
-let arr=[1,2,3,4,5,6,7,8,9];
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 // console.log(arr)
 
 // //Filter ES5 -ES6
 // let es5Filter=arr.filter();
 // //Filter ES5
-var es5Filter44=arr.filter(function(data){
-  return data%2==1;
-});
+var es5Filter44 = arr.filter(function (data) {
+  return data % 2 == 1
+})
 // console.log(es5Filter44);
 
 // //Filter ES6
-let filterEs6=arr.filter((data)=>data %2==0);
+let filterEs6 = arr.filter((data) => data % 2 == 0)
 // console.log(filterEs6);
 
 //////////
-let product33=[
-  {proName:"laptop-1",proPrice:1000},
-  {proName:"laptop-2",proPrice:2000},
-  {proName:"laptop-3",proPrice:3000},
-];
-
+let product33 = [
+  { proName: 'laptop-1', proPrice: 1000 },
+  { proName: 'laptop-2', proPrice: 2000 },
+  { proName: 'laptop-3', proPrice: 3000 },
+]
 
 //ES6
-let proPriceMap2=product33.map((data)=>data.proPrice);
+let proPriceMap2 = product33.map((data) => data.proPrice)
 // console.log(proPriceMap2)
 
 ///////////////////////////////////////
-//argument Fonksiyona gelene dataların hepsini almak için kullanıyoruz
-const argumentData=function(){
-  console.log(arguments);
-}
-argumentData(5,6,3,9)
 
+//argument Fonksiyona gelene dataların hepsini almak için kullanıyoruz
+const argumentData = function () {
+  console.log(arguments)
+}
+// argumentData(5,6,3,9,"Veri");
+//////////////////////////////////////////////////////////////////////////////
+//ES5
+//Class
+var Stu = function (adi, soyadi, yas) {
+  //constructor
+  this.adi = adi
+  this.soyadi = soyadi
+  this.yas = yas
+  console.log(this)
+}
+//var sonuc = new Stu('Hamit', 'Mızrak', 37)
+//+++++++++++++++++++++++++++
+//ES6 
+//class
+class PersonEs6 {
+  //parametreli constructor
+  constructor(adi="adını girmediniz", soyadi="soyadını girmediniz", yas=0) {
+    this.adi = adi
+    this.soyadi = soyadi
+    this.yas = yas
+    console.log('constructor çalıştı')
+  }
+
+  //metot
+  message(data){
+   return `message: ${data} : adı: ${adi}`
+  }
+}
+// let sonuc2 = new classEs6()
+let sonuc2 = new PersonEs6('Hamit', 'Mızrak', 37);
+console.log(sonuc2)
+console.log(sonuc2.message("Big Data 2556"))
+console.log("*****************************************")
+
+//extends (tamamen super classtan gelen dataları kullanmak)
+class Teacher extends PersonEs6{}
+let sonuc3= new Teacher('Teacher Name', 'Teacher Surname', 37);
+console.log(sonuc3)
+
+//extends (kendimize ait özellik ekleyelim)
+class Teacher2 extends PersonEs6{
+  constructor(adi="adını girmediniz", soyadi="soyadını girmediniz", yas=0,hescode="hesCodes4521xc"){
+    super(adi,soyadi,yas);//üst atadan gelen özellikler
+    this.hescode=hescode; // yeni edindiği özellik
+  }
+
+  dataChangeExtends(data){
+    return `data: ${data} Adı:${adi}  Soyadı:${soyadi}  Yaş:${this.yas}  HesCode:${this.hescode} `
+  }
+  
+}
+let sonuc4= new Teacher2('Teacher Name4', 'Teacher Surnam', 34,"HesCodeXYZ4");
+console.log(sonuc4)
+console.log(sonuc2.dataChangeExtends)
 
 //////////////////////////////////////////////////////////////////////////////
 //callback()  ==> ES5
 //promise()   ==> ES6
 //async/await ==> ES7
-
-
 
 
 
