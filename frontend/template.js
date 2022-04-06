@@ -371,7 +371,7 @@ var person = {
     });
   }
 };
-person.getJava(); // //Normal
+person.getJava() // //Normal
 // function normal(){}
 // //ES5 (anonymous function)
 // var es5=function(){}
@@ -379,3 +379,6 @@ person.getJava(); // //Normal
 // var es6=()=>{}
 //synchronous  (Senkron)  ==> sıralı bir şekilde devam ediyor
 //asynchronous (Asenkron) ==> aynı andan birden fazla process çalışması
+(function () {
+  console.log("Sürekli çalışmam bu sayfa açıldığında bir kere çalışırım");
+})();

@@ -418,23 +418,8 @@ var person={
 }
 
 person.getJava()
+/////////////////////////////////////////////////////////////////////////////////////////
+//ES6
 
-
-
-
-
-
-
-// //Normal
-// function normal(){}
-
-// //ES5 (anonymous function)
-// var es5=function(){}
-
-
-// //ES6 Arrow function
-// var es6=()=>{}
-//synchronous  (Senkron)  ==> sıralı bir şekilde devam ediyor
-//asynchronous (Asenkron) ==> aynı andan birden fazla process çalışması
 
 
