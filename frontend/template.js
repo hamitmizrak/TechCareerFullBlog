@@ -566,7 +566,7 @@ var Stu = function Stu(adi, soyadi, yas) {
   this.yas = yas;
   console.log(this);
 }; //var sonuc = new Stu('Hamit', 'Mızrak', 37)
-//+++++++++++++++++++++++++++
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //ES6 
 //class
 
@@ -601,7 +601,7 @@ var PersonEs6 = /*#__PURE__*/function () {
 var sonuc2 = new PersonEs6('Hamit', 'Mızrak', 37);
 console.log(sonuc2);
 console.log(sonuc2.message("Big Data 2556"));
-console.log("*****************************************"); //extends (tamamen super classtan gelen dataları kullanmak)
+console.log("**************************************************************************************"); //extends (tamamen super classtan gelen dataları kullanmak)
 
 var Teacher = /*#__PURE__*/function (_PersonEs) {
   _inherits(Teacher, _PersonEs);
@@ -654,7 +654,7 @@ var Teacher2 = /*#__PURE__*/function (_PersonEs2) {
 
 var sonuc4 = new Teacher2('Teacher Name4', 'Teacher Surnam', 34, "HesCodeXYZ4");
 console.log(sonuc4);
-console.log(sonuc2.dataChangeExtends); //////////////////////////////////////////////////////////////////////////////
+console.log(sonuc2.dataChangeExtends); ////////////////////////////////////////////////////////////////////////////////////////////////////////
 //callback()  ==> ES5
 //promise()   ==> ES6
 //async/await ==> ES7

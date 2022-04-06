@@ -605,7 +605,7 @@ var Stu = function (adi, soyadi, yas) {
   console.log(this)
 }
 //var sonuc = new Stu('Hamit', 'Mızrak', 37)
-//+++++++++++++++++++++++++++
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //ES6 
 //class
 class PersonEs6 {
@@ -626,7 +626,7 @@ class PersonEs6 {
 let sonuc2 = new PersonEs6('Hamit', 'Mızrak', 37);
 console.log(sonuc2)
 console.log(sonuc2.message("Big Data 2556"))
-console.log("*****************************************")
+console.log("**************************************************************************************")
 
 //extends (tamamen super classtan gelen dataları kullanmak)
 class Teacher extends PersonEs6{}
@@ -649,7 +649,7 @@ let sonuc4= new Teacher2('Teacher Name4', 'Teacher Surnam', 34,"HesCodeXYZ4");
 console.log(sonuc4)
 console.log(sonuc2.dataChangeExtends)
 
-//////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 //callback()  ==> ES5
 //promise()   ==> ES6
 //async/await ==> ES7
