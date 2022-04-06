@@ -481,6 +481,7 @@ var value77 = deneme77(6, 4); // console.log(value77)
 /////////////////////////////////////////////////////////////////////////////
 //+++++Immedia Function++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //()();
+//Self Invoking Function(Immedia Function) ==> kendi kendini çağıran functionlar
 //Parametresiz
 
 (function deneme() {

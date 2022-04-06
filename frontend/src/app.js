@@ -543,6 +543,7 @@ let value77= deneme77(6,4);
 /////////////////////////////////////////////////////////////////////////////
 //+++++Immedia Function++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //()();
+//Self Invoking Function(Immedia Function) ==> kendi kendini çağıran functionlar
 //Parametresiz
 (function deneme(){
   console.log("Çağırmadan kullanacağım Normal Functionsın")
