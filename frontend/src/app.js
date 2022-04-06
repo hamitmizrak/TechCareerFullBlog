@@ -609,6 +609,7 @@ var Stu = function (adi, soyadi, yas) {
 //ES6 
 //class
 class PersonEs6 {
+  
   //parametreli constructor
   constructor(adi="adını girmediniz", soyadi="soyadını girmediniz", yas=0) {
     this.adi = adi
