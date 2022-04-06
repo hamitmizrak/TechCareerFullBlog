@@ -545,19 +545,57 @@ let value77= deneme77(6,4);
 //()();
 //Self Invoking Function(Immedia Function) ==> kendi kendini çağıran functionlar
 //Parametresiz
-(function deneme(){
-  console.log("Çağırmadan kullanacağım Normal Functionsın")
-})();
-(function(){
-  console.log("Çağırmadan kullanacağım Anonymous Functionsın")
-})();
+// (function deneme(){
+//   console.log("Çağırmadan kullanacağım Normal Functionsın")
+// })();
+// (function(){
+//   console.log("Çağırmadan kullanacağım Anonymous Functionsın")
+// })();
 
-(()=>{
-  console.log("Çağırmadan kullanacağım Arrow Functionsın")
-})();
+// (()=>{
+//   console.log("Çağırmadan kullanacağım Arrow Functionsın")
+// })();
 
-//Parametreli
-((data)=>console.log(`Veri: ${data}`))("ES6");
+// //Parametreli
+// ((data)=>console.log(`Veri: ${data}`))("ES6");
+
+//////////////////////////////////////////////////////////////////////////////
+//Filter ES5-ES6
+let arr=[1,2,3,4,5,6,7,8,9];
+// console.log(arr)
+
+// //Filter ES5 -ES6
+// let es5Filter=arr.filter();
+// //Filter ES5
+var es5Filter44=arr.filter(function(data){
+  return data%2==1;
+});
+// console.log(es5Filter44);
+
+// //Filter ES6
+let filterEs6=arr.filter((data)=>data %2==0);
+// console.log(filterEs6);
+
+//////////
+let product33=[
+  {proName:"laptop-1",proPrice:1000},
+  {proName:"laptop-2",proPrice:2000},
+  {proName:"laptop-3",proPrice:3000},
+];
+
+
+//ES6
+let proPriceMap2=product33.map((data)=>data.proPrice);
+// console.log(proPriceMap2)
+
+///////////////////////////////////////
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+//callback()  ==> ES5
+//promise()   ==> ES6
+//async/await ==> ES7
 
 
 
