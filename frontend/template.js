@@ -370,15 +370,28 @@ var person = {
       console.log(mecbur.name);
     });
   }
-};
-person.getJava() // //Normal
-// function normal(){}
-// //ES5 (anonymous function)
-// var es5=function(){}
-// //ES6 Arrow function
-// var es6=()=>{}
-//synchronous  (Senkron)  ==> sıralı bir şekilde devam ediyor
-//asynchronous (Asenkron) ==> aynı andan birden fazla process çalışması
-(function () {
-  console.log("Sürekli çalışmam bu sayfa açıldığında bir kere çalışırım");
-})();
+}; // person.getJava()
+/////////////////////////////////////////////////////////////////////////////////////////
+//ES6
+//let -const
+//template literal ==> ``
+//(let-const)
+//  var adi="Hamit";
+//  let adi2="Hamit";
+//  const adi4="Ankara";
+//global scope
+
+var adi = "Hamit"; //Function scope
+
+function fullName() {
+  var adi = "Hamit444";
+  var soyadi = "Mızrak";
+  console.log("function scope: " + " adi: " + adi + " soyadı: " + soyadi);
+} // fullName();
+// console.log("global Scope: adi ",adi)
+// console.log("function Scope: soyadi ",soyadi);
+//conditional Block
+// if(true){
+//   let yas=37;
+//   console.log(yas)
+// }

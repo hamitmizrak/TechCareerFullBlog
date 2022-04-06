@@ -417,9 +417,38 @@ var person={
   }
 }
 
-person.getJava()
+// person.getJava()
 /////////////////////////////////////////////////////////////////////////////////////////
 //ES6
+//let -const
+//template literal ==> ``
+
+//(let-const)
+//  var adi="Hamit";
+//  let adi2="Hamit";
+//  const adi4="Ankara";
+
+
+//global scope
+let adi="Hamit";
+
+//Function scope
+function fullName(){
+  let adi="Hamit444";
+  let soyadi="Mızrak";
+  console.log("function scope: "+" adi: "+adi+" soyadı: "+soyadi);
+}
+// fullName();
+
+// console.log("global Scope: adi ",adi)
+// console.log("function Scope: soyadi ",soyadi);
+
+//conditional Block
+// if(true){
+//   let yas=37;
+//   console.log(yas)
+// }
+
 
 
 
