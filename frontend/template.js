@@ -631,8 +631,7 @@ var Teacher = /*#__PURE__*/function () {
     _classCallCheck(this, Teacher);
 
     this.adi = adi;
-    this.soyadi = soyadi;
-    console.log("ilk constructor çalıştı");
+    this.soyadi = soyadi; // console.log("ilk constructor çalıştı");
   } //metot
 
 
@@ -677,8 +676,8 @@ var TeacherSpecialRoom = /*#__PURE__*/function (_Teacher2) {
     _classCallCheck(this, TeacherSpecialRoom);
 
     _this = _super2.call(this, adi, soyadi);
-    _this.okulKodu = okulKodu;
-    console.log("XYz>ilk constructor çalıştı");
+    _this.okulKodu = okulKodu; // console.log("XYz>ilk constructor çalıştı");
+
     return _this;
   }
 
@@ -686,9 +685,45 @@ var TeacherSpecialRoom = /*#__PURE__*/function (_Teacher2) {
 }(Teacher); // let teachInstance=new Teacher();
 
 
-var teachInstance = new Teacher("Hamit", "Mızrak");
-console.log(teachInstance);
-var teachRoomInstance = new TeacherRoom("Hamit", "Mızrak");
-console.log(teachRoomInstance);
-var teachRoomSpecialInstance = new TeacherSpecialRoom("Hamit", "Mızrak", "mnp5263");
-console.log(teachRoomSpecialInstance);
+var teachInstance = new Teacher("Hamit", "Mızrak"); //console.log(teachInstance);
+
+var teachRoomInstance = new TeacherRoom("Hamit", "Mızrak"); //console.log(teachRoomInstance);
+
+var teachRoomSpecialInstance = new TeacherSpecialRoom("Hamit", "Mızrak", "mnp5263"); //console.log(teachRoomSpecialInstance);
+/////////////////////////////////////////////////////////////////////////////
+//rest parameter: Aslında dizidir
+//normal
+
+function normalFunction(x, y) {
+  return x + y;
+}
+
+console.log(normalFunction(1, 2, 3, 4)); //rest-1
+
+function restFunction(x, y) {
+  for (var _len = arguments.length, data = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+    data[_key - 2] = arguments[_key];
+  }
+
+  console.log(data);
+  console.log(x + y + data[0] + data[1] + data[2]);
+}
+
+restFunction(1, 2, 3, 4, 5); //rest-2
+
+function restFunction2() {
+  var sum = 0;
+
+  for (var _len2 = arguments.length, data = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+    data[_key2] = arguments[_key2];
+  }
+
+  for (var _i = 0, _data = data; _i < _data.length; _i++) {
+    var temp = _data[_i];
+    sum += temp;
+  }
+
+  return sum;
+}
+
+console.log(restFunction2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)); /////////////////////////////////////////////////////////////////////////////

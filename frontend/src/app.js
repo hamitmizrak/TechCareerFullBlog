@@ -678,7 +678,7 @@ class Teacher{
   constructor(adi="default adi",soyadi="default soyadi"){
     this.adi=adi;
     this.soyadi=soyadi;
-    console.log("ilk constructor çalıştı");
+   // console.log("ilk constructor çalıştı");
   }
 
   //metot
@@ -695,18 +695,53 @@ class TeacherSpecialRoom extends Teacher {
   constructor(adi="default adi",soyadi="default soyadi",okulKodu="Xyx126558"){
     super(adi,soyadi);
     this.okulKodu=okulKodu;
-    console.log("XYz>ilk constructor çalıştı");
+   // console.log("XYz>ilk constructor çalıştı");
   }
 }
 
 // let teachInstance=new Teacher();
 let teachInstance=new Teacher("Hamit","Mızrak");
-console.log(teachInstance);
+//console.log(teachInstance);
 
 let teachRoomInstance=new TeacherRoom("Hamit","Mızrak");
-console.log(teachRoomInstance);
+//console.log(teachRoomInstance);
 
 let teachRoomSpecialInstance=new TeacherSpecialRoom("Hamit","Mızrak","mnp5263");
-console.log(teachRoomSpecialInstance);
+//console.log(teachRoomSpecialInstance);
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+//rest parameter: Aslında dizidir
+
+//normal
+function normalFunction(x,y){
+  return x+y;
+  }
+console.log(normalFunction(1,2,3,4));
+
+//rest-1
+function restFunction(x,y,...data){
+  console.log(data)
+  console.log(x+y+data[0]+data[1]+data[2])
+}
+restFunction(1,2,3,4,5)
+
+//rest-2
+function restFunction2(...data){
+  let sum=0;
+  for(let temp of data){
+    sum+=temp;
+  }
+  return sum;
+}
+
+console.log(restFunction2(1,2,3,4,5,6,7,8,9,10))
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+
 
 
