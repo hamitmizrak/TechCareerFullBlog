@@ -569,92 +569,126 @@ var Stu = function Stu(adi, soyadi, yas) {
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //ES6 
 //class
+// class PersonEs6 {
+//   //parametreli constructor
+//   constructor(adi="adını girmediniz", soyadi="soyadını girmediniz", yas=0) {
+//     this.adi = adi
+//     this.soyadi = soyadi
+//     this.yas = yas
+//     console.log('constructor çalıştı')
+//   }
+//   //metot
+//   message(data){
+//    return `message: ${data} : adı: ${adi}`
+//   }
+// }
+// // let sonuc2 = new classEs6()
+// let sonuc2 = new PersonEs6('Hamit', 'Mızrak', 37);
+// console.log(sonuc2)
+// console.log(sonuc2.message("Big Data 2556"))
+// console.log("**************************************************************************************")
+// //extends (tamamen super classtan gelen dataları kullanmak)
+// class Teacher extends PersonEs6{}
+// let sonuc3= new Teacher('Teacher Name', 'Teacher Surname', 37);
+// console.log(sonuc3)
+// //extends (kendimize ait özellik ekleyelim)
+// class Teacher2 extends PersonEs6{
+//   constructor(adi="adını girmediniz", soyadi="soyadını girmediniz", yas=0,hescode="hesCodes4521xc"){
+//     super(adi,soyadi,yas);//üst atadan gelen özellikler
+//     this.hescode=hescode; // yeni edindiği özellik
+//   }
+//   dataChangeExtends(data){
+//     return `data: ${data} Adı:${adi}  Soyadı:${soyadi}  Yaş:${this.yas}  HesCode:${this.hescode} `
+//   }
+// }
+// let sonuc4= new Teacher2('Teacher Name4', 'Teacher Surnam', 34,"HesCodeXYZ4");
+// console.log(sonuc4)
+// console.log(sonuc2.dataChangeExtends)
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//destructuring
+//callback()  ==> ES5
+//promise()   ==> ES6
+//async/await ==> ES7
+//Browser sessionscope
+//browser localstorage
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//ES6
+//class
+// class Teacher{
+//   //constructor
+//   constructor(){}
+//   //metot
+//   deneme(){}
+// }
 
 
-var PersonEs6 = /*#__PURE__*/function () {
-  //parametreli constructor
-  function PersonEs6() {
-    var adi = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "adını girmediniz";
-    var soyadi = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "soyadını girmediniz";
-    var yas = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+var Teacher = /*#__PURE__*/function () {
+  //constructor
+  function Teacher() {
+    var adi = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "default adi";
+    var soyadi = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "default soyadi";
 
-    _classCallCheck(this, PersonEs6);
+    _classCallCheck(this, Teacher);
 
     this.adi = adi;
     this.soyadi = soyadi;
-    this.yas = yas;
-    console.log('constructor çalıştı');
+    console.log("ilk constructor çalıştı");
   } //metot
 
 
-  _createClass(PersonEs6, [{
-    key: "message",
-    value: function message(data) {
-      return "message: ".concat(data, " : ad\u0131: ").concat(adi);
+  _createClass(Teacher, [{
+    key: "fullName",
+    value: function fullName(data) {
+      return "adi: ".concat(this.adi, " soyadi: ").concat(this.adi);
     }
   }]);
 
-  return PersonEs6;
-}(); // let sonuc2 = new classEs6()
+  return Teacher;
+}(); //2.class
 
 
-var sonuc2 = new PersonEs6('Hamit', 'Mızrak', 37);
-console.log(sonuc2);
-console.log(sonuc2.message("Big Data 2556"));
-console.log("**************************************************************************************"); //extends (tamamen super classtan gelen dataları kullanmak)
+var TeacherRoom = /*#__PURE__*/function (_Teacher) {
+  _inherits(TeacherRoom, _Teacher);
 
-var Teacher = /*#__PURE__*/function (_PersonEs) {
-  _inherits(Teacher, _PersonEs);
+  var _super = _createSuper(TeacherRoom);
 
-  var _super = _createSuper(Teacher);
-
-  function Teacher() {
-    _classCallCheck(this, Teacher);
+  function TeacherRoom() {
+    _classCallCheck(this, TeacherRoom);
 
     return _super.apply(this, arguments);
   }
 
-  return _createClass(Teacher);
-}(PersonEs6);
+  return _createClass(TeacherRoom);
+}(Teacher); //3.class
 
-var sonuc3 = new Teacher('Teacher Name', 'Teacher Surname', 37);
-console.log(sonuc3); //extends (kendimize ait özellik ekleyelim)
 
-var Teacher2 = /*#__PURE__*/function (_PersonEs2) {
-  _inherits(Teacher2, _PersonEs2);
+var TeacherSpecialRoom = /*#__PURE__*/function (_Teacher2) {
+  _inherits(TeacherSpecialRoom, _Teacher2);
 
-  var _super2 = _createSuper(Teacher2);
+  var _super2 = _createSuper(TeacherSpecialRoom);
 
-  function Teacher2() {
+  function TeacherSpecialRoom() {
     var _this;
 
-    var adi = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "adını girmediniz";
-    var soyadi = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "soyadını girmediniz";
-    var yas = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
-    var hescode = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : "hesCodes4521xc";
+    var adi = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "default adi";
+    var soyadi = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "default soyadi";
+    var okulKodu = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : "Xyx126558";
 
-    _classCallCheck(this, Teacher2);
+    _classCallCheck(this, TeacherSpecialRoom);
 
-    _this = _super2.call(this, adi, soyadi, yas); //üst atadan gelen özellikler
-
-    _this.hescode = hescode; // yeni edindiği özellik
-
+    _this = _super2.call(this, adi, soyadi);
+    _this.okulKodu = okulKodu;
+    console.log("XYz>ilk constructor çalıştı");
     return _this;
   }
 
-  _createClass(Teacher2, [{
-    key: "dataChangeExtends",
-    value: function dataChangeExtends(data) {
-      return "data: ".concat(data, " Ad\u0131:").concat(adi, "  Soyad\u0131:").concat(soyadi, "  Ya\u015F:").concat(this.yas, "  HesCode:").concat(this.hescode, " ");
-    }
-  }]);
+  return _createClass(TeacherSpecialRoom);
+}(Teacher); // let teachInstance=new Teacher();
 
-  return Teacher2;
-}(PersonEs6);
 
-var sonuc4 = new Teacher2('Teacher Name4', 'Teacher Surnam', 34, "HesCodeXYZ4");
-console.log(sonuc4);
-console.log(sonuc2.dataChangeExtends); ////////////////////////////////////////////////////////////////////////////////////////////////////////
-//callback()  ==> ES5
-//promise()   ==> ES6
-//async/await ==> ES7
+var teachInstance = new Teacher("Hamit", "Mızrak");
+console.log(teachInstance);
+var teachRoomInstance = new TeacherRoom("Hamit", "Mızrak");
+console.log(teachRoomInstance);
+var teachRoomSpecialInstance = new TeacherSpecialRoom("Hamit", "Mızrak", "mnp5263");
+console.log(teachRoomSpecialInstance);

@@ -608,52 +608,105 @@ var Stu = function (adi, soyadi, yas) {
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //ES6 
 //class
-class PersonEs6 {
+// class PersonEs6 {
+
+//   //parametreli constructor
+//   constructor(adi="adını girmediniz", soyadi="soyadını girmediniz", yas=0) {
+//     this.adi = adi
+//     this.soyadi = soyadi
+//     this.yas = yas
+//     console.log('constructor çalıştı')
+//   }
+
+//   //metot
+//   message(data){
+//    return `message: ${data} : adı: ${adi}`
+//   }
+// }
+// // let sonuc2 = new classEs6()
+// let sonuc2 = new PersonEs6('Hamit', 'Mızrak', 37);
+// console.log(sonuc2)
+// console.log(sonuc2.message("Big Data 2556"))
+// console.log("**************************************************************************************")
+
+// //extends (tamamen super classtan gelen dataları kullanmak)
+// class Teacher extends PersonEs6{}
+// let sonuc3= new Teacher('Teacher Name', 'Teacher Surname', 37);
+// console.log(sonuc3)
+
+// //extends (kendimize ait özellik ekleyelim)
+// class Teacher2 extends PersonEs6{
+//   constructor(adi="adını girmediniz", soyadi="soyadını girmediniz", yas=0,hescode="hesCodes4521xc"){
+//     super(adi,soyadi,yas);//üst atadan gelen özellikler
+//     this.hescode=hescode; // yeni edindiği özellik
+//   }
+
+//   dataChangeExtends(data){
+//     return `data: ${data} Adı:${adi}  Soyadı:${soyadi}  Yaş:${this.yas}  HesCode:${this.hescode} `
+//   }
   
-  //parametreli constructor
-  constructor(adi="adını girmediniz", soyadi="soyadını girmediniz", yas=0) {
-    this.adi = adi
-    this.soyadi = soyadi
-    this.yas = yas
-    console.log('constructor çalıştı')
-  }
-
-  //metot
-  message(data){
-   return `message: ${data} : adı: ${adi}`
-  }
-}
-// let sonuc2 = new classEs6()
-let sonuc2 = new PersonEs6('Hamit', 'Mızrak', 37);
-console.log(sonuc2)
-console.log(sonuc2.message("Big Data 2556"))
-console.log("**************************************************************************************")
-
-//extends (tamamen super classtan gelen dataları kullanmak)
-class Teacher extends PersonEs6{}
-let sonuc3= new Teacher('Teacher Name', 'Teacher Surname', 37);
-console.log(sonuc3)
-
-//extends (kendimize ait özellik ekleyelim)
-class Teacher2 extends PersonEs6{
-  constructor(adi="adını girmediniz", soyadi="soyadını girmediniz", yas=0,hescode="hesCodes4521xc"){
-    super(adi,soyadi,yas);//üst atadan gelen özellikler
-    this.hescode=hescode; // yeni edindiği özellik
-  }
-
-  dataChangeExtends(data){
-    return `data: ${data} Adı:${adi}  Soyadı:${soyadi}  Yaş:${this.yas}  HesCode:${this.hescode} `
-  }
-  
-}
-let sonuc4= new Teacher2('Teacher Name4', 'Teacher Surnam', 34,"HesCodeXYZ4");
-console.log(sonuc4)
-console.log(sonuc2.dataChangeExtends)
+// }
+// let sonuc4= new Teacher2('Teacher Name4', 'Teacher Surnam', 34,"HesCodeXYZ4");
+// console.log(sonuc4)
+// console.log(sonuc2.dataChangeExtends)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//destructuring
+
 //callback()  ==> ES5
 //promise()   ==> ES6
 //async/await ==> ES7
 
+//Browser sessionscope
+//browser localstorage
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//ES6
+//class
+// class Teacher{
+
+//   //constructor
+//   constructor(){}
+
+//   //metot
+//   deneme(){}
+// }
+
+class Teacher{
+  //constructor
+  constructor(adi="default adi",soyadi="default soyadi"){
+    this.adi=adi;
+    this.soyadi=soyadi;
+    console.log("ilk constructor çalıştı");
+  }
+
+  //metot
+  fullName(data){
+    return `adi: ${this.adi} soyadi: ${this.adi }`
+  }
+}
+
+//2.class
+class TeacherRoom extends Teacher {}
+
+//3.class
+class TeacherSpecialRoom extends Teacher {
+  constructor(adi="default adi",soyadi="default soyadi",okulKodu="Xyx126558"){
+    super(adi,soyadi);
+    this.okulKodu=okulKodu;
+    console.log("XYz>ilk constructor çalıştı");
+  }
+}
+
+// let teachInstance=new Teacher();
+let teachInstance=new Teacher("Hamit","Mızrak");
+console.log(teachInstance);
+
+let teachRoomInstance=new TeacherRoom("Hamit","Mızrak");
+console.log(teachRoomInstance);
+
+let teachRoomSpecialInstance=new TeacherSpecialRoom("Hamit","Mızrak","mnp5263");
+console.log(teachRoomSpecialInstance);
 
 
