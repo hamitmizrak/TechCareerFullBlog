@@ -718,14 +718,14 @@ let teachRoomSpecialInstance=new TeacherSpecialRoom("Hamit","Mızrak","mnp5263")
 function normalFunction(x,y){
   return x+y;
   }
-console.log(normalFunction(1,2,3,4));
+//console.log(normalFunction(1,2,3,4));
 
 //rest-1
 function restFunction(x,y,...data){
   console.log(data)
   console.log(x+y+data[0]+data[1]+data[2])
 }
-restFunction(1,2,3,4,5)
+//restFunction(1,2,3,4,5)
 
 //rest-2
 function restFunction2(...data){
@@ -736,11 +736,71 @@ function restFunction2(...data){
   return sum;
 }
 
-console.log(restFunction2(1,2,3,4,5,6,7,8,9,10))
+//console.log(restFunction2(1,2,3,4,5,6,7,8,9,10))
 
 
 /////////////////////////////////////////////////////////////////////////////
+//destructuring(şeklini bozmak) AMAÇ: daha okunabilir clean kodlar yazmak
 
+//destructuring assigment ==> []=[];   ==> ({}={})
+//normal
+let x,y,z;
+x=1;
+y=2;
+z=3;
+console.log(x,y,z);
+
+//1.YOL
+[x,y,z]=[4,5,6];
+console.log(x,y,z);
+
+//2.YOL
+({x,y,z}={x:7,y:8,z:9})
+console.log(x,y,z);
+
+//destructuring array const []=diziAdi
+const portData=["8080","5500","3306","5432"];
+
+//1.YOL
+const localhost=portData[0]; 
+const liveServer=portData[1];
+const mysql=portData[2];
+const postgresql=portData[3];
+
+console.log(
+  `
+  localhost: ${localhost}  
+  live-server: ${liveServer}  
+  mysql: ${mysql}  
+  postgresql: ${postgresql}  
+  `
+  )
+
+//2.YOL
+const [localhost2,liveServer2,mysql2,postgresql2]=portData;
+console.log(
+  `
+  localhost: ${localhost2}  
+  live-server: ${liveServer2}  
+  mysql: ${mysql2}  
+  postgresql: ${postgresql2}  
+  `
+  )
+
+//destructuring object  ==> const {}=objectAdi
+//normal
+let person44={
+  adi1:"Hamit",
+  soyadi1:"Mızrak",
+  meslek1:"BM"
+};
+console.log(person44)
+console.log(person44.adi1)
+console.log(person44.soyadi1)
+console.log(person44.meslek1)
+
+const {adi1,soyadi1,meslek1}=person44;
+console.log(adi1+" "+soyadi1,meslek1)
 
 
 

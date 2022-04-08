@@ -696,9 +696,9 @@ var teachRoomSpecialInstance = new TeacherSpecialRoom("Hamit", "Mızrak", "mnp52
 
 function normalFunction(x, y) {
   return x + y;
-}
+} //console.log(normalFunction(1,2,3,4));
+//rest-1
 
-console.log(normalFunction(1, 2, 3, 4)); //rest-1
 
 function restFunction(x, y) {
   for (var _len = arguments.length, data = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
@@ -707,9 +707,9 @@ function restFunction(x, y) {
 
   console.log(data);
   console.log(x + y + data[0] + data[1] + data[2]);
-}
+} //restFunction(1,2,3,4,5)
+//rest-2
 
-restFunction(1, 2, 3, 4, 5); //rest-2
 
 function restFunction2() {
   var sum = 0;
@@ -724,6 +724,59 @@ function restFunction2() {
   }
 
   return sum;
-}
+} //console.log(restFunction2(1,2,3,4,5,6,7,8,9,10))
+/////////////////////////////////////////////////////////////////////////////
+//destructuring(şeklini bozmak) AMAÇ: daha okunabilir clean kodlar yazmak
+//destructuring assigment ==> []=[];   ==> ({}={})
+//normal
 
-console.log(restFunction2(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)); /////////////////////////////////////////////////////////////////////////////
+
+var x, y, z;
+x = 1;
+y = 2;
+z = 3;
+console.log(x, y, z); //1.YOL
+
+x = 4;
+y = 5;
+z = 6;
+console.log(x, y, z); //2.YOL
+
+var _x$y$z = {
+  x: 7,
+  y: 8,
+  z: 9
+};
+x = _x$y$z.x;
+y = _x$y$z.y;
+z = _x$y$z.z;
+console.log(x, y, z); //destructuring array const []=diziAdi
+
+var portData = ["8080", "5500", "3306", "5432"]; //1.YOL
+
+var localhost = portData[0];
+var liveServer = portData[1];
+var mysql = portData[2];
+var postgresql = portData[3];
+console.log("\n  localhost: ".concat(localhost, "  \n  live-server: ").concat(liveServer, "  \n  mysql: ").concat(mysql, "  \n  postgresql: ").concat(postgresql, "  \n  ")); //2.YOL
+
+var localhost2 = portData[0],
+    liveServer2 = portData[1],
+    mysql2 = portData[2],
+    postgresql2 = portData[3];
+console.log("\n  localhost: ".concat(localhost2, "  \n  live-server: ").concat(liveServer2, "  \n  mysql: ").concat(mysql2, "  \n  postgresql: ").concat(postgresql2, "  \n  ")); //destructuring object  ==> const {}=objectAdi
+//normal
+
+var person44 = {
+  adi1: "Hamit",
+  soyadi1: "Mızrak",
+  meslek1: "BM"
+};
+console.log(person44);
+console.log(person44.adi1);
+console.log(person44.soyadi1);
+console.log(person44.meslek1);
+var adi1 = person44.adi1,
+    soyadi1 = person44.soyadi1,
+    meslek1 = person44.meslek1;
+console.log(adi1 + " " + soyadi1, meslek1);
