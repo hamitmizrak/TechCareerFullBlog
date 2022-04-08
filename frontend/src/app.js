@@ -478,7 +478,7 @@ JS Kursu
 // console.log("İl: "+firstName+ " İlçe:"+lastName)
 // console.log(`İl: ${firstName} İlçe: ${lastName}`)
 
-console.log('*******************************************')
+// console.log('*******************************************')
 let student = {
   name: 'Hamit',
   surname: 'Mızrak',
@@ -748,15 +748,15 @@ let x,y,z;
 x=1;
 y=2;
 z=3;
-console.log(x,y,z);
+//console.log(x,y,z);
 
 //1.YOL
 [x,y,z]=[4,5,6];
-console.log(x,y,z);
+//console.log(x,y,z);
 
 //2.YOL
 ({x,y,z}={x:7,y:8,z:9})
-console.log(x,y,z);
+//console.log(x,y,z);
 
 //destructuring array const []=diziAdi
 const portData=["8080","5500","3306","5432"];

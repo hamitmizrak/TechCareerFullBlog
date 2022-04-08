@@ -437,8 +437,8 @@ var deneme2 = "Merhabalar\nNas\u0131ls\u0131n\u0131z\nJS Kursu\n"; // console.lo
 // let lastName=`Battalgazi`;
 // console.log("İl: "+firstName+ " İlçe:"+lastName)
 // console.log(`İl: ${firstName} İlçe: ${lastName}`)
+// console.log('*******************************************')
 
-console.log('*******************************************');
 var student = {
   name: 'Hamit',
   surname: 'Mızrak'
@@ -734,14 +734,12 @@ function restFunction2() {
 var x, y, z;
 x = 1;
 y = 2;
-z = 3;
-console.log(x, y, z); //1.YOL
+z = 3; //console.log(x,y,z);
+//1.YOL
 
 x = 4;
 y = 5;
 z = 6;
-console.log(x, y, z); //2.YOL
-
 var _x$y$z = {
   x: 7,
   y: 8,
@@ -750,8 +748,8 @@ var _x$y$z = {
 x = _x$y$z.x;
 y = _x$y$z.y;
 z = _x$y$z.z;
-console.log(x, y, z); //destructuring array const []=diziAdi
-
+//console.log(x,y,z);
+//destructuring array const []=diziAdi
 var portData = ["8080", "5500", "3306", "5432"]; //1.YOL
 
 var localhost = portData[0];
