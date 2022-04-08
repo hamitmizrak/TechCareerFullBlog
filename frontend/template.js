@@ -757,26 +757,40 @@ var portData = ["8080", "5500", "3306", "5432"]; //1.YOL
 var localhost = portData[0];
 var liveServer = portData[1];
 var mysql = portData[2];
-var postgresql = portData[3];
-console.log("\n  localhost: ".concat(localhost, "  \n  live-server: ").concat(liveServer, "  \n  mysql: ").concat(mysql, "  \n  postgresql: ").concat(postgresql, "  \n  ")); //2.YOL
+var postgresql = portData[3]; // console.log(
+//   `
+//   localhost: ${localhost}  
+//   live-server: ${liveServer}  
+//   mysql: ${mysql}  
+//   postgresql: ${postgresql}  
+//   `
+//   )
+//2.YOL
 
 var localhost2 = portData[0],
     liveServer2 = portData[1],
     mysql2 = portData[2],
-    postgresql2 = portData[3];
-console.log("\n  localhost: ".concat(localhost2, "  \n  live-server: ").concat(liveServer2, "  \n  mysql: ").concat(mysql2, "  \n  postgresql: ").concat(postgresql2, "  \n  ")); //destructuring object  ==> const {}=objectAdi
+    postgresql2 = portData[3]; // console.log(
+//   `
+//   localhost: ${localhost2}  
+//   live-server: ${liveServer2}  
+//   mysql: ${mysql2}  
+//   postgresql: ${postgresql2}  
+//   `
+//   )
+//destructuring object  ==> const {}=objectAdi
 //normal
 
 var person44 = {
   adi1: "Hamit",
   soyadi1: "Mızrak",
   meslek1: "BM"
-};
-console.log(person44);
-console.log(person44.adi1);
-console.log(person44.soyadi1);
-console.log(person44.meslek1);
+}; // console.log(person44)
+// console.log(person44.adi1)
+// console.log(person44.soyadi1)
+// console.log(person44.meslek1)
+
 var adi1 = person44.adi1,
     soyadi1 = person44.soyadi1,
-    meslek1 = person44.meslek1;
-console.log(adi1 + " " + soyadi1, meslek1);
+    meslek1 = person44.meslek1; //console.log(adi1+" "+soyadi1,meslek1)
+/////////////////////////////////////////////////////////////////////////////

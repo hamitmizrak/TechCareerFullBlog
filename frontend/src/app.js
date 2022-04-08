@@ -767,40 +767,42 @@ const liveServer=portData[1];
 const mysql=portData[2];
 const postgresql=portData[3];
 
-console.log(
-  `
-  localhost: ${localhost}  
-  live-server: ${liveServer}  
-  mysql: ${mysql}  
-  postgresql: ${postgresql}  
-  `
-  )
+// console.log(
+//   `
+//   localhost: ${localhost}  
+//   live-server: ${liveServer}  
+//   mysql: ${mysql}  
+//   postgresql: ${postgresql}  
+//   `
+//   )
 
 //2.YOL
 const [localhost2,liveServer2,mysql2,postgresql2]=portData;
-console.log(
-  `
-  localhost: ${localhost2}  
-  live-server: ${liveServer2}  
-  mysql: ${mysql2}  
-  postgresql: ${postgresql2}  
-  `
-  )
+// console.log(
+//   `
+//   localhost: ${localhost2}  
+//   live-server: ${liveServer2}  
+//   mysql: ${mysql2}  
+//   postgresql: ${postgresql2}  
+//   `
+//   )
 
 //destructuring object  ==> const {}=objectAdi
 //normal
 let person44={
   adi1:"Hamit",
   soyadi1:"Mızrak",
-  meslek1:"BM"
+  meslek1:"BM" 
 };
-console.log(person44)
-console.log(person44.adi1)
-console.log(person44.soyadi1)
-console.log(person44.meslek1)
+// console.log(person44)
+// console.log(person44.adi1)
+// console.log(person44.soyadi1)
+// console.log(person44.meslek1)
 
 const {adi1,soyadi1,meslek1}=person44;
-console.log(adi1+" "+soyadi1,meslek1)
+//console.log(adi1+" "+soyadi1,meslek1)
+
+/////////////////////////////////////////////////////////////////////////////
 
 
 
