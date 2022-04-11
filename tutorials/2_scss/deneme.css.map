@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,iCAAO;EACL,MAAM,EAAC,KAAK;EACZ,KAAK,EAAC,KAAK;EACX,UAAU,EAAC,IAAI;EACf,MAAM,EAAC,IAAI;EACX,OAAO,EAAC,YAAY;;AAItB,QAAQ;EAEN,UAAU,EAAC,GAAG",
+"sources": ["deneme.scss"],
+"names": [],
+"file": "deneme.css"
+}

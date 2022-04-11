@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      const adi = localStorage.setItem("adi44", "Hamit");
+      const soyadi = localStorage.setItem("soyadi44", "Mızrak");
+      console.log(localStorage);
+      console.log("+++++++++++++++++++++++++++++++++++++++++++++");
+
+      //get
+      const getLocal = localStorage.getItem("adi44");
+      console.log(getLocal);
+      console.log("+++++++++++++++++++++++++++++++++++++++++++++");
+
+      //remove
+      const removeLocal = localStorage.removeItem("adi44");
+      console.log(localStorage);
+      console.log("+++++++++++++++++++++++++++++++++++++++++++++");
+
+      //clear
+      localStorage.clear();
+      console.log(localStorage);
+      console.log("+++++++++++++++++++++++++++++++++++++++++++++");
+
+      //dizi
+      var dizi = ["Keman", "Gitar", "Viyolensel"];
+      localStorage.setItem("dizi_key", dizi);
+      console.log(localStorage);
+      console.log("+++++++++++++++++++++++++++++++++++++++++++++");
+
+      //obje ==> JSON.stringify
+      localStorage.setItem("object_key", JSON.stringify(dizi));
+      const obje44 = JSON.parse(localStorage.getItem("object_key"));
+      console.log(obje44);
+    </script>
+  </head>
+  <body></body>
+</html>

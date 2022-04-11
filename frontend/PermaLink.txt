@@ -14,3 +14,9 @@ clear
 
 npm run babel 
 npm run start
+
+
+
+/////////////////////////////////////////////////////////////
+react ==>
+https://tr.reactjs.org/docs/create-a-new-react-app.html

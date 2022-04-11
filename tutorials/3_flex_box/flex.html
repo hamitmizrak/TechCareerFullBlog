@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex_container {
+        display: flex;
+        /* flex-direction: row; */
+        /* flex-direction: row-reverse; */
+        /* flex-direction: column; */
+        flex-direction: column-reverse;
+        background-color: gray;
+        padding: 12px;
+      }
+      .flex_item {
+        background-color: yellow;
+        padding: 12px;
+        margin: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- div.flex_container>(div.flex_item{item $})*4 -->
+    <div class="flex_container">
+      <div class="flex_item">item 1</div>
+      <div class="flex_item">item 2</div>
+      <div class="flex_item">item 3</div>
+      <div class="flex_item">item 4</div>
+    </div>
+  </body>
+</html>

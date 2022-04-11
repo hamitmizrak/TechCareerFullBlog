@@ -1,0 +1,11 @@
+.kutu, #birinci, #ikinci, #ucuncu {
+  height: 150px;
+  width: 150px;
+  background: blue;
+  margin: 43px;
+  display: inline-block; }
+
+#birinci {
+  background: red; }
+
+/*# sourceMappingURL=deneme.css.map */

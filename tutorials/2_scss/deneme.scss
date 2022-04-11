@@ -1,0 +1,21 @@
+.kutu  {
+  height:150px;
+  width:150px;
+  background:blue;
+  margin:43px;
+  display:inline-block;
+}
+
+
+#birinci{
+  @extend .kutu;
+  background:red; 
+}
+
+#ikinci{
+  @extend .kutu;
+}
+
+#ucuncu{
+  @extend .kutu;
+}
