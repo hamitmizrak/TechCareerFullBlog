@@ -1,15 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
 
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals'
 import 'bootstrap/dist/css/bootstrap.min.css'
 // import HeaderFunction from './HeaderFunction';
 // import MainBodyClass from './MainBodyClass';
 // import FooterFunction from './FooterFunction';
 //import EventStringifyParse from './EventStringifyParse';
-import EventBind from './EventBind';
-
+// import EventBind from './EventBind';
+import FormBind from './FormBind'
 
 // let objectData={
 //    main:"Main bilgisi",
@@ -21,16 +21,15 @@ import EventBind from './EventBind';
 // };
 
 ReactDOM.render(
-  <React.StrictMode >
-
-    <EventBind language="js java html5" />
-   {/* <EventStringifyParse header={objectData.mainData} classData={objectData.classData} />
+  <React.StrictMode>
+    <FormBind />
+    {/* <EventBind language="js java html5" /> */}
+    {/* <EventStringifyParse header={objectData.mainData} classData={objectData.classData} />
      <HeaderFunction head="header bilgisi"/>
     <MainBodyClass  main={objectData.main} computerName={objectData.computerName}  computerTrade={objectData.computerTrade}  computerPrice={objectData.computerPrice} />
     <FooterFunction foot="footer bilgisi"/> */}
   </React.StrictMode>,
-  document.getElementById('root')
-);
+  document.getElementById('root'),
+)
 
-
-reportWebVitals();
+reportWebVitals()
