@@ -15,7 +15,7 @@ export default class FormBind extends Component {
     let name3=e.target.elements.input_name.value.trim();
     console.log(name3+" = "+name3.length)
   }
-
+ 
   render() {
     return (
       <div>
