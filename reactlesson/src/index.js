@@ -9,7 +9,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 // import FooterFunction from './FooterFunction';
 //import EventStringifyParse from './EventStringifyParse';
 // import EventBind from './EventBind';
-import FormBind from './FormBind'
+// import FormBind from './FormBind'
+import StateClass2 from './StateClass2'
 
 // let objectData={
 //    main:"Main bilgisi",
@@ -22,7 +23,8 @@ import FormBind from './FormBind'
 
 ReactDOM.render(
   <React.StrictMode>
-    <FormBind />
+    {/* <FormBind /> */}
+    <StateClass2 dataChange="Datalarım geldi"/>
     {/* <EventBind language="js java html5" /> */}
     {/* <EventStringifyParse header={objectData.mainData} classData={objectData.classData} />
      <HeaderFunction head="header bilgisi"/>
