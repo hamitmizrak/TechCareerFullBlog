@@ -15,7 +15,7 @@ export default class EventBind extends Component {
   eventBindMethod() {
     console.log('Tıklandı')
     console.log(this)
-    console.log("*************************")
+    console.log("************************************************")
     console.log(this.props)
     console.log(this.props.language)
   }
