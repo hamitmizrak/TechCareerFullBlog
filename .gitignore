@@ -1,6 +1,7 @@
 # special
 frontend/node_modules
 reactlesson/node_modules
+lastlesson/ajax_axios/node_modules
 
 HELP.md
 target/
