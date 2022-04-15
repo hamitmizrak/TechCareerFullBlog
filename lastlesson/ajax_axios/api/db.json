@@ -1,0 +1,34 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "adi1",
+      "surname": "soyadı1"
+    },
+    {
+      "id": 2,
+      "name": "adi222",
+      "surname": "soyadı222"
+    },
+    {
+      "id": 3,
+      "name": "adi3",
+      "surname": "soyadı3"
+    },
+    {
+      "id": 4,
+      "name": "adi4",
+      "surname": "soyadı4"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

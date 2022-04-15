@@ -1,0 +1,26 @@
+npm install -g json-server
+json-server --watch db.json
+
+http://localhost:3000/posts
+
+LIST
+http://localhost:3000/posts
+
+SEARCH 
+http://localhost:3000/posts/5
+
+DELETE 
+http://localhost:3000/posts/5
+
+
+PUT 
+http://localhost:3000/posts
+ {
+      "id": 4,
+      "name": "adi4",
+      "surname": "soyadı4"
+}
+
+
+
+

@@ -4,13 +4,15 @@ import './index.css'
 
 import reportWebVitals from './reportWebVitals'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import NavbarClass from './NavbarClass'
 // import HeaderFunction from './HeaderFunction';
 // import MainBodyClass from './MainBodyClass';
 // import FooterFunction from './FooterFunction';
 //import EventStringifyParse from './EventStringifyParse';
 // import EventBind from './EventBind';
 // import FormBind from './FormBind'
-import StateClass2 from './StateClass2'
+// import StateClass2 from './StateClass2'
+
 
 // let objectData={
 //    main:"Main bilgisi",
@@ -23,8 +25,9 @@ import StateClass2 from './StateClass2'
 
 ReactDOM.render(
   <React.StrictMode>
+   <NavbarClass />
     {/* <FormBind /> */}
-    <StateClass2 dataChange="Datalarım geldi"/>
+    {/* <StateClass2/> */}
     {/* <EventBind language="js java html5" /> */}
     {/* <EventStringifyParse header={objectData.mainData} classData={objectData.classData} />
      <HeaderFunction head="header bilgisi"/>

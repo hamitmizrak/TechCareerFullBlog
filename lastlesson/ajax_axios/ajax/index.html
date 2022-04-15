@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- jquery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <!-- div.container>div.row>div.col-md-6+div.col-md-6>table.table.table-hover.table-striped.mt-5>thead>tr>th*3^tbody#tbody_id -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <form action="">
+                    <div class="form-group mt-5">
+                        <label for="">ID</label>
+                        <input type="text" class="form-control" id="post_id" placeholder="id" required>
+                    </div>
+                    <div class="form-group ">
+                        <label for="">NAME</label>
+                        <input type="text" class="form-control" id="post_name" placeholder="adi" required>
+                    </div>
+                    <div class="form-group ">
+                        <label for="">SURNAME</label>
+                        <input type="text" class="form-control" id="post_surname" placeholder="soyadi" required>
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-md-8">
+                <table class="table table-hover table-striped mt-5">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>ADI</th>
+                            <th>SOYADI</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody_id"></tbody>
+                    <tfoot>
+                        <tr>
+                            <th colspan="3">
+                                <p class="text-danger" id="failed_id"></p>
+                            </th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <button class="btn btn-danger shadow ml-3" id="ajaxPost">Verileri Gönder</button>
+            <button class="btn btn-primary shadow ml-3" id="ajaxGet">Veri Listeleme</button>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- 
+    "id": 1,
+    "name": "adi1",
+    "surname": "soyadı1" -->
+    <!-- post -->
+    <script>
+        $(function () {
+            $("#ajaxPost").click(function () {
+                // console.log("Tıklandı")
+                let baseUrl = "http://localhost:3000";
+                let tbody = $("#tbody_id");
+                // $.ajax({}).done({}).fail({})
+                $.ajax({
+                    method: "POST",
+                    url: baseUrl + "/posts",
+                    data: {
+                        "id": $("#post_id").val(),
+                        "name": $("#post_name").val(),
+                        "surname": $("#post_surname").val()
+                    }
+                }).done(function (veriler) {
+                    for (let i = 0; i < 20; i++) {
+                        let tr_table = "";
+                        tr_table += '<tr><td>' + veriler[i].id + '</td></tr>' +
+                            '<tr><td>' + veriler[i].name + '</td></tr>' +
+                            '<tr><td>' + veriler[i].surname + '</td></tr>';
+                        tbody.append(tr_table);
+
+                    }
+                }).fail(function () {
+                    $("#failed_id").html("Ekleme sırasında hata meydana geldi");
+                    alert("Ekleme sırasında hata meydana geldi");
+                })
+
+            });
+
+        });
+
+
+    </script>
+
+    <!-- get -->
+    <script>
+        $(function () {
+            $("#ajaxGet").click(function () {
+                console.log("Tıklandı")
+                let baseUrl = "http://localhost:3000";
+                let tbody = $("#tbody_id");
+                $.ajax({
+                    method: "GET",
+                    url: baseUrl + "/posts"
+                }).done(function (veriler) {
+                    for (let k = 0; k < 20; k++) {
+                        let tr_table = "";
+                        tr_table += '<tr><td>' + veriler[k].id + '</td>' +
+                            '<td>' + veriler[k].name + '</td>' +
+                            '<th>' + veriler[k].surname + '</th></tr>';
+                        tbody.append(tr_table);
+                    }
+                }).fail(function () {
+                    $("#failed_id").html("Listeleme sırasında hata meydana geldi");
+                    alert("Listeleme sırasında hata meydana geldi");
+                });
+            });
+        })
+    </script>
+</body>
+
+</html>
